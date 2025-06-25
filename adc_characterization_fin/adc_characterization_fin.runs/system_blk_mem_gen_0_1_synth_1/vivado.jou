@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Jun 24 10:21:16 2025
+# Process ID         : 25640
+# Current directory  : D:/Vivado+Vitis/redpitaya_guide/tmp/5_averager/5_averager.runs/system_blk_mem_gen_0_1_synth_1
+# Command line       : vivado.exe -log system_blk_mem_gen_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_blk_mem_gen_0_1.tcl
+# Log file           : D:/Vivado+Vitis/redpitaya_guide/tmp/5_averager/5_averager.runs/system_blk_mem_gen_0_1_synth_1/system_blk_mem_gen_0_1.vds
+# Journal file       : D:/Vivado+Vitis/redpitaya_guide/tmp/5_averager/5_averager.runs/system_blk_mem_gen_0_1_synth_1\vivado.jou
+# Running On         : GiridharKING
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16850 MB
+# Swap memory        : 2080 MB
+# Total Virtual      : 18930 MB
+# Available Virtual  : 7692 MB
+#-----------------------------------------------------------
+source system_blk_mem_gen_0_1.tcl -notrace
