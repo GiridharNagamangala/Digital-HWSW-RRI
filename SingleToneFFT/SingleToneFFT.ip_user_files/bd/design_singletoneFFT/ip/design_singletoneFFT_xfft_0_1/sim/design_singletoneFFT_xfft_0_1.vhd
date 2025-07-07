@@ -210,7 +210,7 @@ BEGIN
   U0 : xfft_v9_1_13
     GENERIC MAP (
       C_XDEVICEFAMILY => "zynq",
-      C_PART => "xc7z020clg484-1",
+      C_PART => "xc7z010clg400-1",
       C_S_AXIS_CONFIG_TDATA_WIDTH => 8,
       C_S_AXIS_DATA_TDATA_WIDTH => 32,
       C_M_AXIS_DATA_TDATA_WIDTH => 64,

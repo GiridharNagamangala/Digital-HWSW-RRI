@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Jul  4 15:06:00 2025
-# Process ID         : 29052
-# Current directory  : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1
+# Start of session at: Mon Jul  7 15:53:01 2025
+# Process ID         : 50776
+# Current directory  : D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1
 # Command line       : vivado.exe -log design_singletoneFFT_blk_mem_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_singletoneFFT_blk_mem_gen_0_0.tcl
-# Log file           : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/design_singletoneFFT_blk_mem_gen_0_0.vds
-# Journal file       : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1\vivado.jou
+# Log file           : D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/design_singletoneFFT_blk_mem_gen_0_0.vds
+# Journal file       : D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1\vivado.jou
 # Running On         : GiridharKING
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
@@ -19,22 +19,22 @@
 # Host memory        : 16850 MB
 # Swap memory        : 4563 MB
 # Total Virtual      : 21413 MB
-# Available Virtual  : 7185 MB
+# Available Virtual  : 8539 MB
 #-----------------------------------------------------------
 source design_singletoneFFT_blk_mem_gen_0_0.tcl -notrace
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_singletoneFFT_blk_mem_gen_0_0
-Command: synth_design -top design_singletoneFFT_blk_mem_gen_0_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Command: synth_design -top design_singletoneFFT_blk_mem_gen_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Device 21-403] Loading part xc7z020clg484-1
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 40092
+INFO: [Synth 8-7075] Helper process launched with PID 4312
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1101.230 ; gain = 465.605
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1079.773 ; gain = 466.324
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/synth/design_singletoneFFT_blk_mem_gen_0_0.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/synth/design_singletoneFFT_blk_mem_gen_0_0.vhd:76]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -77,7 +77,7 @@ INFO: [Synth 8-638] synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' [
 	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
 	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
-	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_MODE_B bound to: READ_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 64 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 64 - type: integer 
 	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
@@ -97,7 +97,7 @@ INFO: [Synth 8-638] synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' [
 	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
 	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
 	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
-	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_COMMON_CLK bound to: 1 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
 	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
 	Parameter C_USE_URAM bound to: 0 - type: integer 
@@ -109,9 +109,9 @@ INFO: [Synth 8-638] synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' [
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
 	Parameter C_COUNT_36K_BRAM bound to: 2 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     11.8086 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_9' declared at 'd:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/5ec1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195208' bound to instance 'U0' of component 'blk_mem_gen_v8_4_9' [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/synth/design_singletoneFFT_blk_mem_gen_0_0.vhd:252]
-INFO: [Synth 8-256] done synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' (0#1) [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/synth/design_singletoneFFT_blk_mem_gen_0_0.vhd:76]
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     12.166101 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_9' declared at 'd:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/5ec1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195208' bound to instance 'U0' of component 'blk_mem_gen_v8_4_9' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/synth/design_singletoneFFT_blk_mem_gen_0_0.vhd:252]
+INFO: [Synth 8-256] done synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/synth/design_singletoneFFT_blk_mem_gen_0_0.vhd:76]
 WARNING: [Synth 8-7129] Port CLKB in module blk_mem_output_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SBITERR_I in module blk_mem_output_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DBITERR_I in module blk_mem_output_block is either unconnected or has no load
@@ -165,6 +165,7 @@ WARNING: [Synth 8-7129] Port RSTB in module blk_mem_input_block is either unconn
 WARNING: [Synth 8-7129] Port REGCEB in module blk_mem_input_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_input_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AClk in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_ARESETN in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWID[3] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
@@ -211,58 +212,57 @@ WARNING: [Synth 8-7129] Port S_AXI_AWLEN[3] in module blk_mem_gen_v8_4_9_synth i
 WARNING: [Synth 8-7129] Port S_AXI_AWLEN[2] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWLEN[1] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWLEN[0] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_AWSIZE[2] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1459.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1437.188 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/design_singletoneFFT_blk_mem_gen_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/design_singletoneFFT_blk_mem_gen_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/design_singletoneFFT_blk_mem_gen_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/design_singletoneFFT_blk_mem_gen_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1459.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1437.188 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1459.547 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1437.188 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7z020clg484-1
+Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -275,8 +275,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 220 (col length:60)
-BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -285,25 +285,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished Timing Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1459.547 ; gain = 823.922
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:09 . Memory (MB): peak = 1437.188 ; gain = 823.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -321,37 +321,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1645.027 ; gain = 1009.402
+Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1616.988 ; gain = 1003.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1645.027 ; gain = 1009.402
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1616.988 ; gain = 1003.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1645.027 ; gain = 1009.402
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1616.988 ; gain = 1003.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1645.027 ; gain = 1009.402
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1616.988 ; gain = 1003.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1645.027 ; gain = 1009.402
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1616.988 ; gain = 1003.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1645.027 ; gain = 1009.402
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1616.988 ; gain = 1003.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -370,29 +370,29 @@ Report Cell Usage:
 |1     |RAMB36E1 |     2|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1645.027 ; gain = 1009.402
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1616.988 ; gain = 1003.539
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 184 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:44 . Memory (MB): peak = 1645.027 ; gain = 1009.402
-Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1645.027 ; gain = 1009.402
+Synthesis finished with 0 errors, 0 critical warnings and 185 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:10 . Memory (MB): peak = 1616.988 ; gain = 1003.539
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 1616.988 ; gain = 1003.539
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1645.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1616.988 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1657.777 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1616.988 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 988d14b3
+Synth Design complete | Checksum: 2a055b09
 INFO: [Common 17-83] Releasing license: Synthesis
 22 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1657.777 ; gain = 1257.473
-INFO: [Common 17-1381] The checkpoint 'D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/design_singletoneFFT_blk_mem_gen_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_singletoneFFT_blk_mem_gen_0_0, cache-ID = daf8c39e2e5fc52e
+synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 1616.988 ; gain = 1217.785
+INFO: [Common 17-1381] The checkpoint 'D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/design_singletoneFFT_blk_mem_gen_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_singletoneFFT_blk_mem_gen_0_0, cache-ID = 8048761a0700e702
 INFO: [Coretcl 2-1174] Renamed 8 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/design_singletoneFFT_blk_mem_gen_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_blk_mem_gen_0_0_synth_1/design_singletoneFFT_blk_mem_gen_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_singletoneFFT_blk_mem_gen_0_0_utilization_synth.rpt -pb design_singletoneFFT_blk_mem_gen_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul  4 15:07:04 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  7 15:54:39 2025...

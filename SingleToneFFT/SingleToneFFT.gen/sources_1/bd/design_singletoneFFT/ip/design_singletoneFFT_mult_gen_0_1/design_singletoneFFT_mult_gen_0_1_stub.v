@@ -2,13 +2,13 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Fri Jul  4 15:06:13 2025
+// Date        : Mon Jul  7 15:56:33 2025
 // Host        : GiridharKING running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top design_singletoneFFT_mult_gen_0_1 -prefix
 //               design_singletoneFFT_mult_gen_0_1_ design_singletoneFFT_mult_gen_0_0_stub.v
 // Design      : design_singletoneFFT_mult_gen_0_0
 // Purpose     : Stub declaration of top-level module interface
-// Device      : xc7z020clg484-1
+// Device      : xc7z010clg400-1
 // --------------------------------------------------------------------------------
 
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.

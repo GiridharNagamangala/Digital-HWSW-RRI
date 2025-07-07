@@ -280,10 +280,10 @@ vcom -work xil_defaultlib  -93  \
 
 vlog -work xil_defaultlib  -incr -mfcu  \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_1_0/sim/design_singletoneFFT_signal_delay_1_0.v" \
-"../../../bd/design_singletoneFFT/sim/design_singletoneFFT.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mux_acc_0_0/sim/design_singletoneFFT_mux_acc_0_0.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_0_2/sim/design_singletoneFFT_signal_delay_0_2.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/sim/design_singletoneFFT_latch_0_0.v" \
+"../../../bd/design_singletoneFFT/sim/design_singletoneFFT.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

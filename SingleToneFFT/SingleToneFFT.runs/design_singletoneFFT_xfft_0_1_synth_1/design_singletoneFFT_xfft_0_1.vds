@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Jul  4 15:07:39 2025
-# Process ID         : 32368
-# Current directory  : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1
+# Start of session at: Mon Jul  7 15:56:03 2025
+# Process ID         : 47168
+# Current directory  : D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1
 # Command line       : vivado.exe -log design_singletoneFFT_xfft_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_singletoneFFT_xfft_0_1.tcl
-# Log file           : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/design_singletoneFFT_xfft_0_1.vds
-# Journal file       : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1\vivado.jou
+# Log file           : D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/design_singletoneFFT_xfft_0_1.vds
+# Journal file       : D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1\vivado.jou
 # Running On         : GiridharKING
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
@@ -19,24 +19,25 @@
 # Host memory        : 16850 MB
 # Swap memory        : 4563 MB
 # Total Virtual      : 21413 MB
-# Available Virtual  : 11723 MB
+# Available Virtual  : 4895 MB
 #-----------------------------------------------------------
 source design_singletoneFFT_xfft_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 388.676 ; gain = 87.145
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_singletoneFFT_xfft_0_1
-Command: synth_design -top design_singletoneFFT_xfft_0_1 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
+Command: synth_design -top design_singletoneFFT_xfft_0_1 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: [Device 21-403] Loading part xc7z020clg484-1
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 31572
+INFO: [Synth 8-7075] Helper process launched with PID 33472
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1104.688 ; gain = 465.980
+Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1082.387 ; gain = 465.543
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_singletoneFFT_xfft_0_1' [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/synth/design_singletoneFFT_xfft_0_1.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'design_singletoneFFT_xfft_0_1' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/synth/design_singletoneFFT_xfft_0_1.vhd:82]
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
-	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_PART bound to: xc7z010clg400-1 - type: string 
 	Parameter C_S_AXIS_CONFIG_TDATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_S_AXIS_DATA_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_DATA_TDATA_WIDTH bound to: 64 - type: integer 
@@ -71,8 +72,8 @@ INFO: [Synth 8-638] synthesizing module 'design_singletoneFFT_xfft_0_1' [d:/Viva
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
 	Parameter C_SYSTOLICFFT_INV bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xfft_v9_1_13' declared at 'd:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/7162/hdl/xfft_v9_1.vhd:58' bound to instance 'U0' of component 'xfft_v9_1_13' [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/synth/design_singletoneFFT_xfft_0_1.vhd:217]
-INFO: [Synth 8-256] done synthesizing module 'design_singletoneFFT_xfft_0_1' (0#1) [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/synth/design_singletoneFFT_xfft_0_1.vhd:82]
+INFO: [Synth 8-3491] module 'xfft_v9_1_13' declared at 'd:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/7162/hdl/xfft_v9_1.vhd:58' bound to instance 'U0' of component 'xfft_v9_1_13' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/synth/design_singletoneFFT_xfft_0_1.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'design_singletoneFFT_xfft_0_1' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/synth/design_singletoneFFT_xfft_0_1.vhd:82]
 WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized72 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized72 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_18_legacy__parameterized4 is either unconnected or has no load
@@ -175,58 +176,58 @@ WARNING: [Synth 8-7129] Port C_IN in module c_addsub_v12_0_19_viv__parameterized
 WARNING: [Synth 8-7129] Port Q1 in module shift_ram__parameterized65 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:24 ; elapsed = 00:01:45 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished RTL Elaboration : Time (s): cpu = 00:01:45 ; elapsed = 00:02:08 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:45 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:45 ; elapsed = 00:02:08 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:24 ; elapsed = 00:01:45 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:45 ; elapsed = 00:02:08 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.300 . Memory (MB): peak = 3492.035 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 3483.488 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2382 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/design_singletoneFFT_xfft_0_1_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/design_singletoneFFT_xfft_0_1_ooc.xdc] for cell 'U0'
-Parsing XDC File [D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/design_singletoneFFT_xfft_0_1_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/design_singletoneFFT_xfft_0_1_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3492.035 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 3483.488 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 250 instances were transformed.
   FD => FDRE: 5 instances
   FDE => FDRE: 236 instances
   FDR => FDRE: 9 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.279 . Memory (MB): peak = 3492.035 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.250 . Memory (MB): peak = 3483.488 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:37 ; elapsed = 00:01:58 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Constraint Validation : Time (s): cpu = 00:01:56 ; elapsed = 00:02:20 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7z020clg484-1
+Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:37 ; elapsed = 00:01:58 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:56 ; elapsed = 00:02:20 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:37 ; elapsed = 00:01:58 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:56 ; elapsed = 00:02:20 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:41 ; elapsed = 00:02:03 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:00 ; elapsed = 00:02:24 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -238,8 +239,8 @@ Finished RTL Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 220 (col length:60)
-BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -303,25 +304,25 @@ INFO: [Synth 8-3332] Sequential element (non_native_floating_point.xfft_inst/non
 INFO: [Synth 8-3332] Sequential element (non_native_floating_point.xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[4].natural_order_input.PE/delay_addr_tw/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_1_13_viv.
 INFO: [Synth 8-3332] Sequential element (non_native_floating_point.xfft_inst/non_floating_point.arch_d.xfft_inst/no_bit_reverse.busy_gen/proc_start_delay/need_sclr_lut.real_shift_ram.FF_gen[0].reg) is unused and will be removed from module xfft_v9_1_13_viv.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:47 ; elapsed = 00:02:10 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:30 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:57 ; elapsed = 00:02:20 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:13 ; elapsed = 00:02:37 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:00 ; elapsed = 00:02:24 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Timing Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:40 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:04 ; elapsed = 00:02:27 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Technology Mapping : Time (s): cpu = 00:02:18 ; elapsed = 00:02:42 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -339,37 +340,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:08 ; elapsed = 00:02:32 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished IO Insertion : Time (s): cpu = 00:02:21 ; elapsed = 00:02:46 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:08 ; elapsed = 00:02:32 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:21 ; elapsed = 00:02:46 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:23 ; elapsed = 00:02:47 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:23 ; elapsed = 00:02:47 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:23 ; elapsed = 00:02:48 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:23 ; elapsed = 00:02:48 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -411,7 +412,7 @@ Report Cell Usage:
 |8     |LUT2     |   672|
 |9     |LUT3     |  1304|
 |10    |LUT4     |   284|
-|11    |LUT5     |    37|
+|11    |LUT5     |    38|
 |12    |LUT6     |   128|
 |13    |MUXCY    |  1068|
 |14    |RAM64X1S |    31|
@@ -422,21 +423,21 @@ Report Cell Usage:
 |20    |FD       |     5|
 |21    |FDE      |   236|
 |22    |FDR      |     8|
-|23    |FDRE     |  4190|
+|23    |FDRE     |  4191|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:10 ; elapsed = 00:02:33 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:23 ; elapsed = 00:02:48 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 646 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:02:28 . Memory (MB): peak = 3492.035 ; gain = 2853.328
-Synthesis Optimization Complete : Time (s): cpu = 00:02:10 ; elapsed = 00:02:34 . Memory (MB): peak = 3492.035 ; gain = 2853.328
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:02:43 . Memory (MB): peak = 3483.488 ; gain = 2866.645
+Synthesis Optimization Complete : Time (s): cpu = 00:02:23 ; elapsed = 00:02:48 . Memory (MB): peak = 3483.488 ; gain = 2866.645
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.161 . Memory (MB): peak = 3492.035 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 3483.488 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2443 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3492.035 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3483.488 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 596 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 316 instances
@@ -445,16 +446,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 8 instances
   RAM64X1S => RAM64X1S (RAMS64E): 31 instances
 
-Synth Design complete | Checksum: 4eb06635
+Synth Design complete | Checksum: ec3b11a8
 INFO: [Common 17-83] Releasing license: Synthesis
 77 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:17 ; elapsed = 00:02:42 . Memory (MB): peak = 3492.035 ; gain = 3089.074
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 3492.035 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/design_singletoneFFT_xfft_0_1.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_singletoneFFT_xfft_0_1, cache-ID = 58bf4381f5c480d8
+synth_design: Time (s): cpu = 00:02:32 ; elapsed = 00:03:00 . Memory (MB): peak = 3483.488 ; gain = 3083.223
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 3483.488 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/design_singletoneFFT_xfft_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_singletoneFFT_xfft_0_1, cache-ID = 0de8affa4c70b0ce
 INFO: [Coretcl 2-1174] Renamed 659 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 3492.035 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/design_singletoneFFT_xfft_0_1.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.040 . Memory (MB): peak = 3483.488 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1/design_singletoneFFT_xfft_0_1.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_singletoneFFT_xfft_0_1_utilization_synth.rpt -pb design_singletoneFFT_xfft_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul  4 15:10:43 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  7 15:59:28 2025...

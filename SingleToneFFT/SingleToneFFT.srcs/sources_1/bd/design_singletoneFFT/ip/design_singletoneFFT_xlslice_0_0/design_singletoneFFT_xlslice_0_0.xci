@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_singletoneFFT_xlslice_0_0",
-    "cell_name": "mag_fft/xlslice_0",
+    "cell_name": "xlslice_0",
     "component_reference": "xilinx.com:ip:xlslice:1.0",
     "ip_revision": "4",
     "gen_directory": "../../../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_0",
@@ -12,7 +12,7 @@
         "DIN_TO": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DIN_FROM": [ { "value": "63", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "DIN_WIDTH": [ { "value": "64", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "DOUT_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ]
+        "DOUT_WIDTH": [ { "value": "32", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ]
       },
       "model_parameters": {
         "DIN_WIDTH": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -21,10 +21,10 @@
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zedboard:part0:1.0" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xc7z020" } ],
-        "PACKAGE": [ { "value": "clg484" } ],
+        "DEVICE": [ { "value": "xc7z010" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],

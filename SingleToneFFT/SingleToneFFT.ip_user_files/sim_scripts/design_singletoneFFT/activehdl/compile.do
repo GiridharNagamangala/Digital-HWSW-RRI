@@ -283,10 +283,10 @@ vcom -work xil_defaultlib -93  \
 
 vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_1_0/sim/design_singletoneFFT_signal_delay_1_0.v" \
-"../../../bd/design_singletoneFFT/sim/design_singletoneFFT.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mux_acc_0_0/sim/design_singletoneFFT_mux_acc_0_0.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_0_2/sim/design_singletoneFFT_signal_delay_0_2.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/sim/design_singletoneFFT_latch_0_0.v" \
+"../../../bd/design_singletoneFFT/sim/design_singletoneFFT.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

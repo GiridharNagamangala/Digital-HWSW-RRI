@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul  7 10:48:44 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul  7 16:01:50 2025" VIVADOVERSION="2024.2">
 
-  <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zedboard:part0:1.0" DEVICE="7z020" NAME="design_singletoneFFT" PACKAGE="clg484" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_singletoneFFT" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="CE_BRAM_ADDR" SIGIS="undef" SIGNAME="External_Ports_CE_BRAM_ADDR">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="CommandLogic_c_counter_binary_0" PORT="CE"/>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="ena"/>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="enb"/>
-        <CONNECTION INSTANCE="CommandLogic_c_counter_binary_0" PORT="CE"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="9" NAME="Counter" RIGHT="0" SIGIS="undef" SIGNAME="CommandLogic_c_counter_binary_0_Q">
@@ -23,27 +23,17 @@
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk_0" SIGIS="clk" SIGNAME="External_Ports_aclk_0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
         <CONNECTION INSTANCE="mag_fft_c_addsub_0" PORT="CLK"/>
-        <CONNECTION INSTANCE="mag_fft_mult_gen_1" PORT="CLK"/>
         <CONNECTION INSTANCE="mag_fft_mult_gen_0" PORT="CLK"/>
+        <CONNECTION INSTANCE="mag_fft_mult_gen_1" PORT="CLK"/>
+        <CONNECTION INSTANCE="CommandLogic_c_counter_binary_0" PORT="CLK"/>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
         <CONNECTION INSTANCE="c_addsub_0" PORT="CLK"/>
         <CONNECTION INSTANCE="xfft_0" PORT="aclk"/>
-        <CONNECTION INSTANCE="CommandLogic_c_counter_binary_0" PORT="CLK"/>
-        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
-        <CONNECTION INSTANCE="signal_delay_1" PORT="clk"/>
         <CONNECTION INSTANCE="mux_acc_0" PORT="clk"/>
         <CONNECTION INSTANCE="signal_delay_0" PORT="clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="0" NAME="delay_tlast" RIGHT="0" SIGIS="undef" SIGNAME="signal_delay_0_dout">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="signal_delay_0" PORT="dout"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="63" NAME="doutb_0" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="doutb"/>
+        <CONNECTION INSTANCE="signal_delay_1" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="latched_tlast" RIGHT="0" SIGIS="undef" SIGNAME="latch_0_sig_out">
@@ -54,11 +44,6 @@
     <PORT DIR="O" NAME="m_axis_data_tlast_0" SIGIS="undef" SIGNAME="xfft_0_m_axis_data_tlast">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xfft_0" PORT="m_axis_data_tlast"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="63" NAME="mag_out" RIGHT="0" SIGIS="undef" SIGNAME="mag_fft_c_addsub_0_S">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="mag_fft_c_addsub_0" PORT="S"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -131,9 +116,9 @@
         </PORT>
         <PORT DIR="O" LEFT="9" NAME="Q" RIGHT="0" SIGIS="data" SIGNAME="CommandLogic_c_counter_binary_0_Q">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Counter"/>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
             <CONNECTION INSTANCE="signal_delay_1" PORT="din"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="Counter"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="SCLR" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="xfft_0_m_axis_data_tlast">
@@ -189,10 +174,10 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="CommandLogic_xlconstant_2_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xfft_0" PORT="s_axis_config_tvalid"/>
             <CONNECTION INSTANCE="c_addsub_0" PORT="SCLR"/>
-            <CONNECTION INSTANCE="signal_delay_1" PORT="rst"/>
+            <CONNECTION INSTANCE="xfft_0" PORT="s_axis_config_tvalid"/>
             <CONNECTION INSTANCE="signal_delay_0" PORT="rst"/>
+            <CONNECTION INSTANCE="signal_delay_1" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -209,8 +194,8 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="CommandLogic_xlconstant_3_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xfft_0" PORT="s_axis_data_tvalid"/>
             <CONNECTION INSTANCE="c_addsub_0" PORT="CE"/>
+            <CONNECTION INSTANCE="xfft_0" PORT="s_axis_data_tvalid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -419,7 +404,6 @@
         <PORT DIR="O" LEFT="63" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mux_acc_0" PORT="val_in"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="doutb_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="External_Ports_CE_BRAM_ADDR">
@@ -466,7 +450,7 @@
           <PARAMETER NAME="MEM_ADDRESS_MODE" VALUE="BYTE_ADDRESS"/>
           <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
           <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
-          <PARAMETER NAME="MEM_WIDTH" VALUE="64"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
           <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
           <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
           <PORTMAPS>
@@ -589,8 +573,8 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="sig_out" RIGHT="0" SIGIS="undef" SIGNAME="latch_0_sig_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mux_acc_0" PORT="sel"/>
             <CONNECTION INSTANCE="External_Ports" PORT="latched_tlast"/>
+            <CONNECTION INSTANCE="mux_acc_0" PORT="sel"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -673,7 +657,6 @@
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="S" RIGHT="0" SIGIS="data" SIGNAME="mag_fft_c_addsub_0_S">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="mag_out"/>
             <CONNECTION INSTANCE="c_addsub_0" PORT="A"/>
           </CONNECTIONS>
         </PORT>
@@ -842,8 +825,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="mag_fft_xlslice_0_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mag_fft_mult_gen_0" PORT="B"/>
             <CONNECTION INSTANCE="mag_fft_mult_gen_0" PORT="A"/>
+            <CONNECTION INSTANCE="mag_fft_mult_gen_0" PORT="B"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -867,8 +850,8 @@
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="mag_fft_xlslice_1_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mag_fft_mult_gen_1" PORT="B"/>
             <CONNECTION INSTANCE="mag_fft_mult_gen_1" PORT="A"/>
+            <CONNECTION INSTANCE="mag_fft_mult_gen_1" PORT="B"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -927,7 +910,6 @@
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="signal_delay_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="latch_0" PORT="sig_in"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="delay_tlast"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="CommandLogic_xlconstant_2_dout">
@@ -1000,7 +982,7 @@
         <PARAMETER NAME="C_NSSR" VALUE="1"/>
         <PARAMETER NAME="C_OPTIMIZE_GOAL" VALUE="0"/>
         <PARAMETER NAME="C_OUTPUT_WIDTH" VALUE="27"/>
-        <PARAMETER NAME="C_PART" VALUE="xc7z020clg484-1"/>
+        <PARAMETER NAME="C_PART" VALUE="xc7z010clg400-1"/>
         <PARAMETER NAME="C_REORDER_MEM_TYPE" VALUE="1"/>
         <PARAMETER NAME="C_SYSTOLICFFT_INV" VALUE="0"/>
         <PARAMETER NAME="C_S_AXIS_CONFIG_TDATA_WIDTH" VALUE="8"/>
@@ -1055,8 +1037,8 @@
         <PORT DIR="O" NAME="event_tlast_unexpected" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT"/>
         <PORT DIR="O" LEFT="63" NAME="m_axis_data_tdata" RIGHT="0" SIGIS="undef" SIGNAME="xfft_0_m_axis_data_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="mag_fft_xlslice_1" PORT="Din"/>
             <CONNECTION INSTANCE="mag_fft_xlslice_0" PORT="Din"/>
+            <CONNECTION INSTANCE="mag_fft_xlslice_1" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_data_tlast" SIGIS="undef" SIGNAME="xfft_0_m_axis_data_tlast">

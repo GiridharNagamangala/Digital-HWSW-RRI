@@ -1,0 +1,98 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Jul  7 16:03:43 2025
+| Host         : GiridharKING running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_singletoneFFT_wrapper_control_sets_placed.rpt
+| Design       : design_singletoneFFT_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    79 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |    10 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             471 |          136 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              64 |           18 |
+| Yes          | No                    | No                     |            4064 |          934 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              10 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|                     Clock Signal                    |                                                                                        Enable Signal                                                                                       |                                                Set/Reset Signal                                                | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_input_fifo_read_default.data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_20 |                                                                                                                |                1 |              1 |         1.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_input_fifo_read_default.data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_10 |                                                                                                                |                1 |              1 |         1.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_input_fifo_read_default.data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/wr_enable                                         |                                                                                                                |                1 |              1 |         1.00 |
+|  design_singletoneFFT_i/signal_delay_0/inst/dout[0] |                                                                                                                                                                                            |                                                                                                                |                1 |              1 |         1.00 |
+|  aclk_0_IBUF_BUFG                                   | CE_BRAM_ADDR_IBUF                                                                                                                                                                          | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/ifx_data[0] |                3 |             10 |         3.33 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_symbols_out_default.symbols_out_remaining[9]_i_1_n_0                                                                              |                                                                                                                |                4 |             10 |         2.50 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/CE                                                                                                                                    |                                                                                                                |                4 |             12 |         3.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_rep__0_1                                                                                        |                                                                                                                |                4 |             12 |         3.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_rep_1                                                                                           |                                                                                                                |                4 |             12 |         3.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_rep_5                                                                                           |                                                                                                                |                4 |             12 |         3.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_rep_3                                                                                           |                                                                                                                |                5 |             12 |         2.40 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_rep_2                                                                                           |                                                                                                                |                4 |             12 |         3.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_rep__0_3                                                                                        |                                                                                                                |                4 |             12 |         3.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_rep_4                                                                                           |                                                                                                                |                5 |             12 |         2.40 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_rep__0_2                                                                                        |                                                                                                                |                5 |             12 |         2.40 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/non_native_floating_point.xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/proc0_counter/load_cnt_ce                                            |                                                                                                                |                4 |             12 |         3.00 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/data_out_fifo_write                                                                                                  |                                                                                                                |                7 |             55 |         7.86 |
+|  aclk_0_IBUF_BUFG                                   |                                                                                                                                                                                            | design_singletoneFFT_i/mux_acc_0/inst/val_out[63]_i_1_n_0                                                      |               18 |             64 |         3.56 |
+|  aclk_0_IBUF_BUFG                                   |                                                                                                                                                                                            |                                                                                                                |              143 |            511 |         3.57 |
+|  aclk_0_IBUF_BUFG                                   | design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                                |                                                                                                                |              885 |           4848 |         5.48 |
++-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

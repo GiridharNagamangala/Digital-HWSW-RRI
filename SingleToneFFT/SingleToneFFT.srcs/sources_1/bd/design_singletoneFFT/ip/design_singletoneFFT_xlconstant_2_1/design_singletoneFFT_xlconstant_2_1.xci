@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_singletoneFFT_xlconstant_2_1",
-    "cell_name": "CommandLogic/xlconstant_2",
+    "cell_name": "xlconstant_2",
     "component_reference": "xilinx.com:ip:xlconstant:1.1",
     "ip_revision": "9",
     "gen_directory": "../../../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_2_1",
@@ -18,10 +18,10 @@
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zedboard:part0:1.0" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xc7z020" } ],
-        "PACKAGE": [ { "value": "clg484" } ],
+        "DEVICE": [ { "value": "xc7z010" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],

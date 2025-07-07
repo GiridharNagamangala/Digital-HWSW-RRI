@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Jul  7 10:48:44 2025
+//Date        : Mon Jul  7 15:52:47 2025
 //Host        : GiridharKING running 64-bit major release  (build 9200)
 //Command     : generate_target design_singletoneFFT.bd
 //Design      : design_singletoneFFT
@@ -63,36 +63,30 @@ module design_singletoneFFT
     Counter,
     S_0,
     aclk_0,
-    delay_tlast,
-    doutb_0,
     latched_tlast,
-    m_axis_data_tlast_0,
-    mag_out);
+    m_axis_data_tlast_0);
   input CE_BRAM_ADDR;
   output [9:0]Counter;
   (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.S_0 DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.S_0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 64}" *) output [63:0]S_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK_0, CLK_DOMAIN design_singletoneFFT_aclk_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input aclk_0;
-  output [0:0]delay_tlast;
-  output [63:0]doutb_0;
   output [0:0]latched_tlast;
   output m_axis_data_tlast_0;
-  output [63:0]mag_out;
 
   wire CE_BRAM_ADDR;
   wire [0:0]CommandLogic_bram_wea;
   wire [9:0]Counter;
   wire [63:0]S_0;
   wire aclk_0;
-  wire [0:0]delay_tlast;
-  wire [63:0]doutb_0;
+  wire [63:0]blk_mem_gen_0_doutb;
   wire [0:0]inputs_dout;
   wire [31:0]inputs_dout_0;
   wire [7:0]inputs_dout_1;
   wire [0:0]inputs_dout_2;
   wire [0:0]latched_tlast;
   wire m_axis_data_tlast_0;
-  wire [63:0]mag_out;
+  wire [63:0]mag_fft_mag_out;
   wire [63:0]mux_acc_0_val_out;
+  wire [0:0]signal_delay_0_dout;
   wire [9:0]signal_delay_1_dout;
   wire [63:0]xfft_0_m_axis_data_tdata;
 
@@ -113,34 +107,34 @@ module design_singletoneFFT
         .clkb(aclk_0),
         .dina(S_0),
         .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b0,1'b0}),
-        .doutb(doutb_0),
+        .doutb(blk_mem_gen_0_doutb),
         .ena(CE_BRAM_ADDR),
         .enb(CE_BRAM_ADDR),
         .wea(CommandLogic_bram_wea),
         .web(CommandLogic_bram_wea));
   design_singletoneFFT_c_addsub_0_1 c_addsub_0
-       (.A(mag_out),
+       (.A(mag_fft_mag_out),
         .B(mux_acc_0_val_out),
         .CE(inputs_dout),
         .CLK(aclk_0),
         .S(S_0),
         .SCLR(inputs_dout_2));
   design_singletoneFFT_latch_0_0 latch_0
-       (.sig_in(delay_tlast),
+       (.sig_in(signal_delay_0_dout),
         .sig_out(latched_tlast));
   mag_fft_imp_152RPYJ mag_fft
        (.Din(xfft_0_m_axis_data_tdata),
         .aclk_0(aclk_0),
-        .mag_out(mag_out));
+        .mag_out(mag_fft_mag_out));
   design_singletoneFFT_mux_acc_0_0 mux_acc_0
        (.clk(aclk_0),
         .sel(latched_tlast),
-        .val_in(doutb_0),
+        .val_in(blk_mem_gen_0_doutb),
         .val_out(mux_acc_0_val_out));
   design_singletoneFFT_signal_delay_0_2 signal_delay_0
        (.clk(aclk_0),
         .din(m_axis_data_tlast_0),
-        .dout(delay_tlast),
+        .dout(signal_delay_0_dout),
         .rst(inputs_dout_2));
   design_singletoneFFT_signal_delay_1_0 signal_delay_1
        (.clk(aclk_0),

@@ -1,8 +1,8 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5B08BB249497A8B3",
-      "device": "xc7z020clg484-1",
+      "boundary_crc": "0xF9C2B76A00A0B6CC",
+      "device": "xc7z010clg400-1",
       "gen_directory": "../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT",
       "name": "design_singletoneFFT",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -67,23 +67,6 @@
       "CE_BRAM_ADDR": {
         "direction": "I"
       },
-      "mag_out": {
-        "direction": "O",
-        "left": "63",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": [
-              "xilinx.com:interface:datatypes:1.0 {",
-              "DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum",
-              "{} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format",
-              "bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 64",
-              "}"
-            ],
-            "value_src": "ip_prop"
-          }
-        }
-      },
       "S_0": {
         "type": "data",
         "direction": "O",
@@ -101,16 +84,6 @@
             "value_src": "ip_prop"
           }
         }
-      },
-      "doutb_0": {
-        "direction": "O",
-        "left": "63",
-        "right": "0"
-      },
-      "delay_tlast": {
-        "direction": "O",
-        "left": "0",
-        "right": "0"
       },
       "latched_tlast": {
         "direction": "O",
@@ -394,6 +367,9 @@
               },
               "DIN_WIDTH": {
                 "value": "64"
+              },
+              "DOUT_WIDTH": {
+                "value": "32"
               }
             }
           },
@@ -412,6 +388,9 @@
               },
               "DIN_WIDTH": {
                 "value": "64"
+              },
+              "DOUT_WIDTH": {
+                "value": "32"
               }
             }
           },
@@ -466,8 +445,8 @@
             "ports": [
               "aclk_0",
               "c_addsub_0/CLK",
-              "mult_gen_1/CLK",
-              "mult_gen_0/CLK"
+              "mult_gen_0/CLK",
+              "mult_gen_1/CLK"
             ]
           },
           "c_addsub_0_S": {
@@ -491,22 +470,22 @@
           "xfft_0_m_axis_data_tdata": {
             "ports": [
               "Din",
-              "xlslice_1/Din",
-              "xlslice_0/Din"
+              "xlslice_0/Din",
+              "xlslice_1/Din"
             ]
           },
           "xlslice_0_Dout": {
             "ports": [
               "xlslice_0/Dout",
-              "mult_gen_0/B",
-              "mult_gen_0/A"
+              "mult_gen_0/A",
+              "mult_gen_0/B"
             ]
           },
           "xlslice_1_Dout": {
             "ports": [
               "xlslice_1/Dout",
-              "mult_gen_1/B",
-              "mult_gen_1/A"
+              "mult_gen_1/A",
+              "mult_gen_1/B"
             ]
           }
         }
@@ -521,16 +500,49 @@
           "Assume_Synchronous_Clk": {
             "value": "true"
           },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
           "Memory_Type": {
             "value": "True_Dual_Port_RAM"
           },
           "Operating_Mode_B": {
             "value": "READ_FIRST"
           },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "64"
+          },
+          "Read_Width_B": {
+            "value": "64"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
           "Write_Depth_A": {
             "value": "1024"
           },
           "Write_Width_A": {
+            "value": "64"
+          },
+          "Write_Width_B": {
             "value": "64"
           },
           "use_bram_block": {
@@ -740,17 +752,17 @@
       "CE_BRAM_ADDR_1": {
         "ports": [
           "CE_BRAM_ADDR",
+          "CommandLogic/CE",
           "blk_mem_gen_0/ena",
-          "blk_mem_gen_0/enb",
-          "CommandLogic/CE"
+          "blk_mem_gen_0/enb"
         ]
       },
       "CommandLogic_Q_bram_acc": {
         "ports": [
           "CommandLogic/Q_bram_acc",
+          "Counter",
           "blk_mem_gen_0/addra",
-          "signal_delay_1/din",
-          "Counter"
+          "signal_delay_1/din"
         ]
       },
       "CommandLogic_bram_wea": {
@@ -763,22 +775,21 @@
       "aclk_0_1": {
         "ports": [
           "aclk_0",
-          "blk_mem_gen_0/clka",
           "mag_fft/aclk_0",
+          "CommandLogic/CLK",
+          "blk_mem_gen_0/clka",
+          "blk_mem_gen_0/clkb",
           "c_addsub_0/CLK",
           "xfft_0/aclk",
-          "CommandLogic/CLK",
-          "blk_mem_gen_0/clkb",
-          "signal_delay_1/clk",
           "mux_acc_0/clk",
-          "signal_delay_0/clk"
+          "signal_delay_0/clk",
+          "signal_delay_1/clk"
         ]
       },
       "blk_mem_gen_0_doutb": {
         "ports": [
           "blk_mem_gen_0/doutb",
-          "mux_acc_0/val_in",
-          "doutb_0"
+          "mux_acc_0/val_in"
         ]
       },
       "c_addsub_0_S": {
@@ -791,8 +802,8 @@
       "inputs_dout": {
         "ports": [
           "CommandLogic/data_tvalid_en_acc",
-          "xfft_0/s_axis_data_tvalid",
-          "c_addsub_0/CE"
+          "c_addsub_0/CE",
+          "xfft_0/s_axis_data_tvalid"
         ]
       },
       "inputs_dout_0": {
@@ -810,23 +821,22 @@
       "inputs_dout_2": {
         "ports": [
           "CommandLogic/config_tvalid_xrst",
-          "xfft_0/s_axis_config_tvalid",
           "c_addsub_0/SCLR",
-          "signal_delay_1/rst",
-          "signal_delay_0/rst"
+          "xfft_0/s_axis_config_tvalid",
+          "signal_delay_0/rst",
+          "signal_delay_1/rst"
         ]
       },
       "latch_0_sig_out": {
         "ports": [
           "latch_0/sig_out",
-          "mux_acc_0/sel",
-          "latched_tlast"
+          "latched_tlast",
+          "mux_acc_0/sel"
         ]
       },
       "mag_fft_mag_out": {
         "ports": [
           "mag_fft/mag_out",
-          "mag_out",
           "c_addsub_0/A"
         ]
       },
@@ -839,8 +849,7 @@
       "signal_delay_0_dout": {
         "ports": [
           "signal_delay_0/dout",
-          "latch_0/sig_in",
-          "delay_tlast"
+          "latch_0/sig_in"
         ]
       },
       "signal_delay_1_dout": {

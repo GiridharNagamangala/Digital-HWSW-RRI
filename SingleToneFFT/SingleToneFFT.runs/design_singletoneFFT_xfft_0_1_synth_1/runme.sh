@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1'
+HD_PWD='D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_xfft_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
