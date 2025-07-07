@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Jul  4 15:06:21 2025
+# Process ID         : 51916
+# Current directory  : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1
+# Command line       : vivado.exe -log design_singletoneFFT_mult_gen_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_singletoneFFT_mult_gen_0_1.tcl
+# Log file           : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1/design_singletoneFFT_mult_gen_0_1.vds
+# Journal file       : D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1\vivado.jou
+# Running On         : GiridharKING
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16850 MB
+# Swap memory        : 4563 MB
+# Total Virtual      : 21413 MB
+# Available Virtual  : 6798 MB
+#-----------------------------------------------------------
+source design_singletoneFFT_mult_gen_0_1.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_singletoneFFT_mult_gen_0_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry fb7b7d61b27049db to dir: D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.cache/ip/2024.2/f/b/fb7b7d61b27049db/design_singletoneFFT_mult_gen_0_0.dcp to D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1/design_singletoneFFT_mult_gen_0_1.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.cache/ip/2024.2/f/b/fb7b7d61b27049db/design_singletoneFFT_mult_gen_0_0_sim_netlist.v to D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1/design_singletoneFFT_mult_gen_0_1_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.cache/ip/2024.2/f/b/fb7b7d61b27049db/design_singletoneFFT_mult_gen_0_0_sim_netlist.vhdl to D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1/design_singletoneFFT_mult_gen_0_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.cache/ip/2024.2/f/b/fb7b7d61b27049db/design_singletoneFFT_mult_gen_0_0_stub.v to D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1/design_singletoneFFT_mult_gen_0_1_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file d:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.cache/ip/2024.2/f/b/fb7b7d61b27049db/design_singletoneFFT_mult_gen_0_0_stub.vhdl to D:/Vivado+Vitis_Projects/SingleToneFFT/SingleToneFFT.runs/design_singletoneFFT_mult_gen_0_1_synth_1/design_singletoneFFT_mult_gen_0_1_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_singletoneFFT_mult_gen_0_1, cache-ID = fb7b7d61b27049db.
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  4 15:06:32 2025...

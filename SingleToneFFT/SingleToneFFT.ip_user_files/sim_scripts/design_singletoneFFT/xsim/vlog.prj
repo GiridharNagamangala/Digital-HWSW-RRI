@@ -1,0 +1,19 @@
+verilog xil_defaultlib  \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/sim/design_singletoneFFT_xlconstant_0_1.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_2/sim/design_singletoneFFT_xlconstant_0_2.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_2_1/sim/design_singletoneFFT_xlconstant_2_1.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_3_0/sim/design_singletoneFFT_xlconstant_3_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/sim/design_singletoneFFT_xlconstant_4_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_0/sim/design_singletoneFFT_xlslice_0_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_1/sim/design_singletoneFFT_xlslice_0_1.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/sim/design_singletoneFFT_blk_mem_gen_0_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_1_0/sim/design_singletoneFFT_signal_delay_1_0.v" \
+"../../../bd/design_singletoneFFT/sim/design_singletoneFFT.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mux_acc_0_0/sim/design_singletoneFFT_mux_acc_0_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_0_2/sim/design_singletoneFFT_signal_delay_0_2.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/sim/design_singletoneFFT_latch_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

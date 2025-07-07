@@ -1,0 +1,49 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "system_logical_nand_0_1",
+    "cell_name": "bram_block/logical_nand_0",
+    "component_reference": "xilinx.com:module_ref:logical_nand:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../adc_characterization_fin.gen/sources_1/bd/system/ip/system_logical_nand_0_1",
+    "parameters": {
+      "component_parameters": {
+        "IN_WIDTH": [ { "value": "10", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "system_logical_nand_0_1", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "IN_WIDTH": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z010" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../adc_characterization_fin.gen/sources_1/bd/system/ip/system_logical_nand_0_1" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "a": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "b": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "val_out": [ { "direction": "out" } ]
+      }
+    }
+  }
+}

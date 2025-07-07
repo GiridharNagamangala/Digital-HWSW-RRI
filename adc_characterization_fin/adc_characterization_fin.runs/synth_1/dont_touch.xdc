@@ -44,17 +44,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_
 # IP: bd/system/ip/system_blk_mem_gen_0_1/system_blk_mem_gen_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_blk_mem_gen_0_1 || ORIG_REF_NAME==system_blk_mem_gen_0_1} -quiet] -quiet
 
-# IP: bd/system/ip/system_axis_to_bram_writer_0_0/system_axis_to_bram_writer_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axis_to_bram_writer_0_0 || ORIG_REF_NAME==system_axis_to_bram_writer_0_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlconcat_0_0 || ORIG_REF_NAME==system_xlconcat_0_0} -quiet] -quiet
+# IP: bd/system/ip/system_AXIS_BRAM_Connect_0_0/system_AXIS_BRAM_Connect_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_AXIS_BRAM_Connect_0_0 || ORIG_REF_NAME==system_AXIS_BRAM_Connect_0_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlconstant_0_0 || ORIG_REF_NAME==system_xlconstant_0_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_util_vector_logic_0_1/system_util_vector_logic_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_util_vector_logic_0_1 || ORIG_REF_NAME==system_util_vector_logic_0_1} -quiet] -quiet
+# IP: bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlconcat_0_0 || ORIG_REF_NAME==system_xlconcat_0_0} -quiet] -quiet
 
 # IP: bd/system/ip/system_ps7_0_axi_periph_imp_auto_pc_1/system_ps7_0_axi_periph_imp_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_ps7_0_axi_periph_imp_auto_pc_1 || ORIG_REF_NAME==system_ps7_0_axi_periph_imp_auto_pc_1} -quiet] -quiet
@@ -62,4 +59,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_ps7_
 # IP: bd/system/ip/system_ps7_0_axi_periph_imp_auto_pc_0/system_ps7_0_axi_periph_imp_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_ps7_0_axi_periph_imp_auto_pc_0 || ORIG_REF_NAME==system_ps7_0_axi_periph_imp_auto_pc_0} -quiet] -quiet
 
-# XDC: d:/Vivado+Vitis_Projects/adc_characterization_fin/adc_characterization_fin.gen/sources_1/bd/system/system_ooc.xdc
+# XDC: d:/GitHub/Digital-HWSW-RRI/adc_characterization_fin/adc_characterization_fin.gen/sources_1/bd/system/system_ooc.xdc

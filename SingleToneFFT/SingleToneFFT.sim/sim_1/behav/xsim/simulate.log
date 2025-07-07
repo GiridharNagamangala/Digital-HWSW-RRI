@@ -1,0 +1,12 @@
+Time resolution is 1 ps
+Block Memory Generator module design_singletoneFFT_wrapper.design_singletoneFFT_i.blk_mem_gen_0.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Note:   - SCALING_SCH: in_ptr = 1, out_ptr = 1
+Time: 0 ps  Iteration: 0  Process: /design_singletoneFFT_wrapper/design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__952  File: C:/Xilinx/Vivado/2024.2/data/ip/xilinx/xfft_v9_1/hdl/axi_wrapper.vhd
+Note:   - SCALING_SCH: in_ptr = 1, out_ptr = 1
+Time: 0 ps  Iteration: 1  Process: /design_singletoneFFT_wrapper/design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__952  File: C:/Xilinx/Vivado/2024.2/data/ip/xilinx/xfft_v9_1/hdl/axi_wrapper.vhd
+Block Memory Generator module design_singletoneFFT_wrapper.design_singletoneFFT_i.blk_mem_gen_0.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Note:   - SCALING_SCH: in_ptr = 1, out_ptr = 1
+Time: 0 ps  Iteration: 0  Process: /design_singletoneFFT_wrapper/design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__952  File: C:/Xilinx/Vivado/2024.2/data/ip/xilinx/xfft_v9_1/hdl/axi_wrapper.vhd
+Note:   - SCALING_SCH: in_ptr = 1, out_ptr = 1
+Time: 0 ps  Iteration: 1  Process: /design_singletoneFFT_wrapper/design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__952  File: C:/Xilinx/Vivado/2024.2/data/ip/xilinx/xfft_v9_1/hdl/axi_wrapper.vhd
+INFO: xsimkernel Simulation Memory Usage: 63520 KB (Peak: 63520 KB), Simulation CPU Usage: 109967 ms

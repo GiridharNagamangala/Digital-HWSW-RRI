@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "system_util_vector_logic_0_1",
-    "cell_name": "BRAM_Control/util_vector_logic_0",
+    "cell_name": "bram_block/util_vector_logic_0",
     "component_reference": "xilinx.com:ip:util_vector_logic:2.0",
     "ip_revision": "4",
     "gen_directory": "../../../../../../adc_characterization_fin.gen/sources_1/bd/system/ip/system_util_vector_logic_0_1",

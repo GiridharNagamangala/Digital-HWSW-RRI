@@ -1,0 +1,17 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../adc_characterization_fin.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../adc_characterization_fin.gen/sources_1/bd/system/ipshared/86fe/hdl" \
+"../../../bd/system/ip/system_processing_system7_0_0/sim/system_processing_system7_0_0.v" \
+"../../../bd/system/ip/system_ps7_0_axi_periph_imp_xbar_0/sim/system_ps7_0_axi_periph_imp_xbar_0.v" \
+"../../../bd/system/ipshared/a6af/src/axis_red_pitaya_adc.v" \
+"../../../bd/system/ip/system_axis_red_pitaya_adc_0_0/sim/system_axis_red_pitaya_adc_0_0.v" \
+"../../../bd/system/ip/system_signal_split_0_0/sim/system_signal_split_0_0.v" \
+"../../../bd/system/ip/system_blk_mem_gen_0_1/sim/system_blk_mem_gen_0_1.v" \
+"../../../bd/system/ip/system_AXIS_BRAM_Connect_0_0/sim/system_AXIS_BRAM_Connect_0_0.v" \
+"../../../bd/system/ip/system_xlslice_0_0/sim/system_xlslice_0_0.v" \
+"../../../bd/system/ip/system_ps7_0_axi_periph_imp_auto_pc_1/sim/system_ps7_0_axi_periph_imp_auto_pc_1.v" \
+"../../../bd/system/ip/system_ps7_0_axi_periph_imp_auto_pc_0/sim/system_ps7_0_axi_periph_imp_auto_pc_0.v" \
+"../../../bd/system/sim/system.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

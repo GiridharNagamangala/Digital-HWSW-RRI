@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Vivado+Vitis_Projects/adc_characterization_fin/adc_characterization_fin.srcs/constrs_1/imports/cfg/ports.xdc rfile:../../../adc_characterization_fin.srcs/constrs_1/imports/cfg/ports.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/GitHub/Digital-HWSW-RRI/adc_characterization_fin/adc_characterization_fin.srcs/constrs_1/imports/cfg/ports.xdc rfile:../../../adc_characterization_fin.srcs/constrs_1/imports/cfg/ports.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]
 set_property IOB TRUE [get_ports {adc_dat_a_i[*]}]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

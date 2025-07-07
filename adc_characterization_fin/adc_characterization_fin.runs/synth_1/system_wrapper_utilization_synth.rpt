@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Wed Jun 25 15:01:52 2025
+| Date         : Mon Jun 30 12:10:03 2025
 | Host         : GiridharKING running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -161,7 +161,6 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +---------------------------------------+------+
 |                Ref Name               | Used |
 +---------------------------------------+------+
-| system_util_vector_logic_0_1          |    1 |
 | system_util_ds_buf_2_0                |    1 |
 | system_util_ds_buf_1_0                |    1 |
 | system_signal_split_0_0               |    1 |
@@ -172,10 +171,10 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | system_ps7_0_axi_periph_imp_auto_pc_0 |    1 |
 | system_processing_system7_0_0         |    1 |
 | system_blk_mem_gen_0_1                |    1 |
-| system_axis_to_bram_writer_0_0        |    1 |
 | system_axis_red_pitaya_adc_0_0        |    1 |
 | system_axi_gpio_0_0                   |    1 |
 | system_axi_bram_ctrl_0_0              |    1 |
+| system_AXIS_BRAM_Connect_0_0          |    1 |
 +---------------------------------------+------+
 
 

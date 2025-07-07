@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Vivado+Vitis/redpitaya_guide/tmp/5_averager/5_averager.runs/system_blk_mem_gen_0_1_synth_1'
+HD_PWD='D:/GitHub/Digital-HWSW-RRI/adc_characterization_fin/adc_characterization_fin.runs/system_blk_mem_gen_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,0 +1,43 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.719595",
+   "Default View_TopLeft":"-131,-115",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
+#  -string -flagsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port port-id_s_axi_aclk -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace port port-id_s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
+preplace port port-id_aclk -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port port-id_trig -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port port-id_tvalid -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace portBus done -pg 1 -lvl 6 -x 1260 -y 20 -defaultsOSRD
+preplace portBus tdata -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 1 -x 180 -y 460 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 5 -x 1120 -y 380 -defaultsOSRD
+preplace inst c_counter_binary_0 -pg 1 -lvl 1 -x 180 -y 230 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 890 -y 260 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 660 -y 270 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 180 -y 70 -defaultsOSRD
+preplace inst logical_nand_0 -pg 1 -lvl 2 -x 420 -y 80 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 660 -y 80 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 1 40J 460n
+preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 0 1 20J 480n
+preplace netloc aclk1_1 1 0 5 30 340 N 340 N 340 N 340 N
+preplace netloc c_counter_binary_0_Q 1 1 3 320 210 N 210 800
+preplace netloc xlconstant_0_dout 1 3 1 N 270
+preplace netloc xlconcat_0_dout 1 4 1 980 260n
+preplace netloc tdata_1 1 0 5 NJ 150 NJ 150 N 150 NJ 150 990
+preplace netloc trig_1 1 0 5 40J 380 NJ 380 N 380 NJ 380 980
+preplace netloc aresetn_1 1 0 5 NJ 310 NJ 310 520 370 NJ 370 990
+preplace netloc xlconstant_1_dout 1 1 1 N 70
+preplace netloc logical_nand_0_val_out 1 2 1 N 80
+preplace netloc util_vector_logic_0_Res 1 0 6 50 10 N 10 N 10 800J 20 NJ 20 N
+preplace netloc PS7_M01_AXI 1 0 1 NJ 440
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 4 N 460 N 460 N 460 N
+levelinfo -pg 1 0 180 420 660 890 1120 1260
+pagesize -pg 1 -db -bbox -sgen -130 0 1370 540
+"
+}
+0
