@@ -9,4 +9,4 @@ Note:   - SCALING_SCH: in_ptr = 1, out_ptr = 1
 Time: 0 ps  Iteration: 0  Process: /design_singletoneFFT_wrapper/design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__952  File: C:/Xilinx/Vivado/2024.2/data/ip/xilinx/xfft_v9_1/hdl/axi_wrapper.vhd
 Note:   - SCALING_SCH: in_ptr = 1, out_ptr = 1
 Time: 0 ps  Iteration: 1  Process: /design_singletoneFFT_wrapper/design_singletoneFFT_i/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__952  File: C:/Xilinx/Vivado/2024.2/data/ip/xilinx/xfft_v9_1/hdl/axi_wrapper.vhd
-INFO: xsimkernel Simulation Memory Usage: 63520 KB (Peak: 63520 KB), Simulation CPU Usage: 109967 ms
+INFO: xsimkernel Simulation Memory Usage: 64532 KB (Peak: 64532 KB), Simulation CPU Usage: 153968 ms

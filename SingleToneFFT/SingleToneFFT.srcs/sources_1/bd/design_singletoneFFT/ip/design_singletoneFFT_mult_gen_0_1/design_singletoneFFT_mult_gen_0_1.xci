@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "design_singletoneFFT_mult_gen_0_1",
-    "cell_name": "mult_gen_1",
+    "cell_name": "mag_fft/mult_gen_1",
     "component_reference": "xilinx.com:ip:mult_gen:12.0",
     "ip_revision": "22",
     "gen_directory": "../../../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_1",

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Mon Jul  7 16:02:31 2025
+| Date         : Tue Jul  8 09:52:32 2025
 | Host         : GiridharKING running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_singletoneFFT_wrapper_utilization_synth.rpt -pb design_singletoneFFT_wrapper_utilization_synth.pb
 | Design       : design_singletoneFFT_wrapper
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   78 |     0 |          0 |       100 | 78.00 |
+| Bonded IOB                  |   99 |     0 |          0 |       100 | 99.00 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         2 |  0.00 |
@@ -149,8 +149,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   76 |                  IO |
-| IBUF     |    2 |                  IO |
+| OBUF     |   65 |                  IO |
+| IBUF     |   34 |                  IO |
 +----------+------+---------------------+
 
 

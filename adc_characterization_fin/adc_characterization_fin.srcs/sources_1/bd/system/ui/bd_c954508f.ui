@@ -5,63 +5,63 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port Vp_Vn -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
-preplace port Vaux0 -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
-preplace port Vaux1 -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
-preplace port Vaux9 -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
-preplace port Vaux8 -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1120 -y 210 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1120 -y 300 -defaultsOSRD
-preplace port port-id_adc_clk_p_i -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
-preplace port port-id_adc_clk_n_i -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
-preplace port port-id_adc_enc_p_o -pg 1 -lvl 4 -x 1120 -y 330 -defaultsOSRD
-preplace port port-id_adc_enc_n_o -pg 1 -lvl 4 -x 1120 -y 170 -defaultsOSRD
-preplace port port-id_adc_csn_o -pg 1 -lvl 4 -x 1120 -y 710 -defaultsOSRD
-preplace port port-id_dac_clk_o -pg 1 -lvl 4 -x 1120 -y 360 -defaultsOSRD
-preplace port port-id_dac_rst_o -pg 1 -lvl 4 -x 1120 -y 390 -defaultsOSRD
-preplace port port-id_dac_sel_o -pg 1 -lvl 4 -x 1120 -y 420 -defaultsOSRD
-preplace port port-id_dac_wrt_o -pg 1 -lvl 4 -x 1120 -y 450 -defaultsOSRD
-preplace portBus adc_dat_a_i -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
-preplace portBus adc_dat_b_i -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
-preplace portBus dac_dat_o -pg 1 -lvl 4 -x 1120 -y 20 -defaultsOSRD
-preplace portBus dac_pwm_o -pg 1 -lvl 4 -x 1120 -y 50 -defaultsOSRD
-preplace portBus exp_p_tri_io -pg 1 -lvl 4 -x 1120 -y 110 -defaultsOSRD
-preplace portBus exp_n_tri_io -pg 1 -lvl 4 -x 1120 -y 80 -defaultsOSRD
-preplace portBus daisy_p_o -pg 1 -lvl 4 -x 1120 -y 270 -defaultsOSRD
-preplace portBus daisy_n_o -pg 1 -lvl 4 -x 1120 -y 240 -defaultsOSRD
-preplace portBus daisy_p_i -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
-preplace portBus daisy_n_i -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
-preplace portBus led_o -pg 1 -lvl 4 -x 1120 -y 140 -defaultsOSRD
-preplace inst util_ds_buf_1 -pg 1 -lvl 2 -x 580 -y 510 -defaultsOSRD
-preplace inst util_ds_buf_2 -pg 1 -lvl 3 -x 930 -y 520 -defaultsOSRD
+preplace port Vp_Vn -pg 1 -lvl 0 -x -20 -y 320 -defaultsOSRD
+preplace port Vaux0 -pg 1 -lvl 0 -x -20 -y 200 -defaultsOSRD
+preplace port Vaux1 -pg 1 -lvl 0 -x -20 -y 230 -defaultsOSRD
+preplace port Vaux9 -pg 1 -lvl 0 -x -20 -y 290 -defaultsOSRD
+preplace port Vaux8 -pg 1 -lvl 0 -x -20 -y 260 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 1160 -y 210 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1160 -y 300 -defaultsOSRD
+preplace port port-id_adc_clk_p_i -pg 1 -lvl 0 -x -20 -y 80 -defaultsOSRD
+preplace port port-id_adc_clk_n_i -pg 1 -lvl 0 -x -20 -y 110 -defaultsOSRD
+preplace port port-id_adc_enc_p_o -pg 1 -lvl 4 -x 1160 -y 330 -defaultsOSRD
+preplace port port-id_adc_enc_n_o -pg 1 -lvl 4 -x 1160 -y 170 -defaultsOSRD
+preplace port port-id_adc_csn_o -pg 1 -lvl 4 -x 1160 -y 710 -defaultsOSRD
+preplace port port-id_dac_clk_o -pg 1 -lvl 4 -x 1160 -y 360 -defaultsOSRD
+preplace port port-id_dac_rst_o -pg 1 -lvl 4 -x 1160 -y 390 -defaultsOSRD
+preplace port port-id_dac_sel_o -pg 1 -lvl 4 -x 1160 -y 420 -defaultsOSRD
+preplace port port-id_dac_wrt_o -pg 1 -lvl 4 -x 1160 -y 450 -defaultsOSRD
+preplace portBus adc_dat_a_i -pg 1 -lvl 0 -x -20 -y 140 -defaultsOSRD
+preplace portBus adc_dat_b_i -pg 1 -lvl 0 -x -20 -y 170 -defaultsOSRD
+preplace portBus dac_dat_o -pg 1 -lvl 4 -x 1160 -y 20 -defaultsOSRD
+preplace portBus dac_pwm_o -pg 1 -lvl 4 -x 1160 -y 50 -defaultsOSRD
+preplace portBus exp_p_tri_io -pg 1 -lvl 4 -x 1160 -y 110 -defaultsOSRD
+preplace portBus exp_n_tri_io -pg 1 -lvl 4 -x 1160 -y 80 -defaultsOSRD
+preplace portBus daisy_p_o -pg 1 -lvl 4 -x 1160 -y 270 -defaultsOSRD
+preplace portBus daisy_n_o -pg 1 -lvl 4 -x 1160 -y 240 -defaultsOSRD
+preplace portBus daisy_p_i -pg 1 -lvl 0 -x -20 -y 50 -defaultsOSRD
+preplace portBus daisy_n_i -pg 1 -lvl 0 -x -20 -y 20 -defaultsOSRD
+preplace portBus led_o -pg 1 -lvl 4 -x 1160 -y 140 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 2 -x 610 -y 510 -defaultsOSRD
+preplace inst util_ds_buf_2 -pg 1 -lvl 3 -x 970 -y 520 -defaultsOSRD
 preplace inst PS7 -pg 1 -lvl 1 -x 180 -y 270 -defaultsOSRD
-preplace inst DataAcquisition -pg 1 -lvl 2 -x 580 -y 670 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 2 -x 580 -y 360 -defaultsOSRD
-preplace inst bram_block -pg 1 -lvl 3 -x 930 -y 340 -defaultsOSRD
-preplace netloc BRAM_Control_we_out 1 2 2 740J 190 1070
-preplace netloc DataAcquisition_M_AXIS_PORT1_tdata 1 2 1 780 390n
-preplace netloc DataAcquisition_M_AXIS_PORT1_tvalid 1 2 1 790 410n
-preplace netloc DataAcquisition_adc_clk 1 0 3 30 130 N 130 760
-preplace netloc PS7_peripheral_aresetn 1 1 2 360J 240 790
-preplace netloc adc_clk_n_i_1 1 0 2 NJ 110 350J
-preplace netloc adc_clk_p_i_1 1 0 2 NJ 80 370J
-preplace netloc adc_dat_a_i_1 1 0 2 NJ 140 340J
-preplace netloc adc_dat_b_i_1 1 0 2 20J 150 330J
+preplace inst DataAcquisition -pg 1 -lvl 2 -x 610 -y 670 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 2 -x 610 -y 360 -defaultsOSRD
+preplace inst bram_block -pg 1 -lvl 3 -x 970 -y 340 -defaultsOSRD
+preplace netloc BRAM_Control_we_out 1 2 2 780J 190 1110
+preplace netloc DataAcquisition_M_AXIS_PORT1_tdata 1 2 1 820 390n
+preplace netloc DataAcquisition_M_AXIS_PORT1_tvalid 1 2 1 830 410n
+preplace netloc DataAcquisition_adc_clk 1 0 3 10 130 N 130 800
+preplace netloc PS7_peripheral_aresetn 1 1 2 380J 240 830
+preplace netloc adc_clk_n_i_1 1 0 2 NJ 110 370J
+preplace netloc adc_clk_p_i_1 1 0 2 NJ 80 390J
+preplace netloc adc_dat_a_i_1 1 0 2 NJ 140 360J
+preplace netloc adc_dat_b_i_1 1 0 2 0J 150 350J
 preplace netloc axis_red_pitaya_adc_0_adc_csn 1 2 2 NJ 710 NJ
-preplace netloc daisy_n_i_1 1 0 2 NJ 20 400J
-preplace netloc daisy_p_i_1 1 0 2 NJ 50 390J
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 420 260 770
-preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 1 2 410 250 780
-preplace netloc trig_1 1 2 1 770 370n
-preplace netloc util_ds_buf_1_IBUF_OUT 1 2 1 740 510n
-preplace netloc util_ds_buf_2_OBUF_DS_N 1 3 1 1080J 240n
-preplace netloc util_ds_buf_2_OBUF_DS_P 1 3 1 1100J 270n
+preplace netloc daisy_n_i_1 1 0 2 NJ 20 420J
+preplace netloc daisy_p_i_1 1 0 2 NJ 50 410J
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 440 260 810
+preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 1 2 430 250 820
+preplace netloc trig_1 1 2 1 810 370n
+preplace netloc util_ds_buf_1_IBUF_OUT 1 2 1 780 510n
+preplace netloc util_ds_buf_2_OBUF_DS_N 1 3 1 1120J 240n
+preplace netloc util_ds_buf_2_OBUF_DS_P 1 3 1 1140J 270n
 preplace netloc PS7_M01_AXI 1 1 2 NJ 270 N
 preplace netloc processing_system7_0_DDR 1 1 3 NJ 210 NJ 210 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 230 750J 200 1090J
-preplace netloc ps7_0_axi_periph_M00_AXI 1 1 1 380 250n
-levelinfo -pg 1 0 180 580 930 1120
-pagesize -pg 1 -db -bbox -sgen -160 0 1280 760
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 230 790J 200 1130J
+preplace netloc ps7_0_axi_periph_M00_AXI 1 1 1 400 250n
+levelinfo -pg 1 -20 180 610 970 1160
+pagesize -pg 1 -db -bbox -sgen -200 0 1340 760
 "
 }
 {

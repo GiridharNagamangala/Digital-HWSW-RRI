@@ -10,15 +10,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_sing
 # IP: bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/design_singletoneFFT_xlconstant_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_singletoneFFT_xlconstant_0_1 || ORIG_REF_NAME==design_singletoneFFT_xlconstant_0_1} -quiet] -quiet
 
-# IP: bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_2/design_singletoneFFT_xlconstant_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_singletoneFFT_xlconstant_0_2 || ORIG_REF_NAME==design_singletoneFFT_xlconstant_0_2} -quiet] -quiet
-
-# IP: bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_2_1/design_singletoneFFT_xlconstant_2_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_singletoneFFT_xlconstant_2_1 || ORIG_REF_NAME==design_singletoneFFT_xlconstant_2_1} -quiet] -quiet
-
-# IP: bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_3_0/design_singletoneFFT_xlconstant_3_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_singletoneFFT_xlconstant_3_0 || ORIG_REF_NAME==design_singletoneFFT_xlconstant_3_0} -quiet] -quiet
-
 # IP: bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/design_singletoneFFT_xlconstant_4_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_singletoneFFT_xlconstant_4_0 || ORIG_REF_NAME==design_singletoneFFT_xlconstant_4_0} -quiet] -quiet
 
@@ -57,5 +48,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_sing
 
 # IP: bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/design_singletoneFFT_latch_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_singletoneFFT_latch_0_0 || ORIG_REF_NAME==design_singletoneFFT_latch_0_0} -quiet] -quiet
+
+# IP: bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_1_0/design_singletoneFFT_xlconstant_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_singletoneFFT_xlconstant_1_0 || ORIG_REF_NAME==design_singletoneFFT_xlconstant_1_0} -quiet] -quiet
 
 # XDC: d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/design_singletoneFFT_ooc.xdc

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Mon Jul  7 16:04:07 2025
+| Date         : Tue Jul  8 09:53:59 2025
 | Host         : GiridharKING running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file design_singletoneFFT_wrapper_timing_summary_routed.rpt -pb design_singletoneFFT_wrapper_timing_summary_routed.pb -rpx design_singletoneFFT_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : design_singletoneFFT_wrapper
@@ -55,12 +55,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (5649)
+1. checking no_clock (5997)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (12429)
-5. checking no_input_delay (1)
-6. checking no_output_delay (76)
+4. checking unconstrained_internal_endpoints (13190)
+5. checking no_input_delay (33)
+6. checking no_output_delay (65)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -68,9 +68,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (5649)
+1. checking no_clock (5997)
 ---------------------------
- There are 5648 register/latch pins with no clock driven by root clock pin: aclk_0 (HIGH)
+ There are 5996 register/latch pins with no clock driven by root clock pin: aclk_0 (HIGH)
 
  There is 1 register/latch pin with no clock driven by root clock pin: design_singletoneFFT_i/signal_delay_0/inst/shift_reg_reg[3][0]/Q (HIGH)
 
@@ -85,23 +85,23 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (12429)
+4. checking unconstrained_internal_endpoints (13190)
 ----------------------------------------------------
- There are 12429 pins that are not constrained for maximum delay. (HIGH)
+ There are 13190 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (1)
-------------------------------
- There is 1 input port with no input delay specified. (HIGH)
+5. checking no_input_delay (33)
+-------------------------------
+ There are 33 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (76)
+6. checking no_output_delay (65)
 --------------------------------
- There are 76 ports with no output delay specified. (HIGH)
+ There are 65 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -146,7 +146,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                12505          inf        0.000                      0                12505           NA           NA                      NA                    NA  
+        inf        0.000                      0                13255          inf        0.000                      0                13255           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -215,8 +215,8 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay         12505 Endpoints
-Min Delay         12505 Endpoints
+Max Delay         13255 Endpoints
+Min Delay         13255 Endpoints
 --------------------------------------------------------------------------------------
 
 
@@ -228,79 +228,64 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.614ns  (logic 6.659ns (40.081%)  route 9.955ns (59.919%))
-  Logic Levels:           24  (CARRY4=18 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        17.021ns  (logic 6.057ns (35.586%)  route 10.964ns (64.414%))
+  Logic Levels:           19  (CARRY4=13 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.166 r  <hidden>
-                         net (fo=1, routed)           0.000    16.166    <hidden>
-    SLICE_X17Y84         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.280 r  <hidden>
-                         net (fo=1, routed)           0.000    16.280    <hidden>
-    SLICE_X17Y85         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334    16.614 r  <hidden>
-                         net (fo=1, routed)           0.000    16.614    <hidden>
-    SLICE_X17Y85         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.573 r  <hidden>
+                         net (fo=1, routed)           0.000    16.573    <hidden>
+    SLICE_X26Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.687 r  <hidden>
+                         net (fo=1, routed)           0.000    16.687    <hidden>
+    SLICE_X26Y98         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    17.021 r  <hidden>
+                         net (fo=1, routed)           0.000    17.021    <hidden>
+    SLICE_X26Y98         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -309,79 +294,64 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.593ns  (logic 6.638ns (40.006%)  route 9.955ns (59.995%))
-  Logic Levels:           24  (CARRY4=18 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        17.000ns  (logic 6.036ns (35.507%)  route 10.964ns (64.493%))
+  Logic Levels:           19  (CARRY4=13 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.166 r  <hidden>
-                         net (fo=1, routed)           0.000    16.166    <hidden>
-    SLICE_X17Y84         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.280 r  <hidden>
-                         net (fo=1, routed)           0.000    16.280    <hidden>
-    SLICE_X17Y85         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313    16.593 r  <hidden>
-                         net (fo=1, routed)           0.000    16.593    <hidden>
-    SLICE_X17Y85         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.573 r  <hidden>
+                         net (fo=1, routed)           0.000    16.573    <hidden>
+    SLICE_X26Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.687 r  <hidden>
+                         net (fo=1, routed)           0.000    16.687    <hidden>
+    SLICE_X26Y98         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    17.000 r  <hidden>
+                         net (fo=1, routed)           0.000    17.000    <hidden>
+    SLICE_X26Y98         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -390,79 +360,64 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.519ns  (logic 6.564ns (39.737%)  route 9.955ns (60.263%))
-  Logic Levels:           24  (CARRY4=18 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        16.926ns  (logic 5.962ns (35.225%)  route 10.964ns (64.775%))
+  Logic Levels:           19  (CARRY4=13 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.166 r  <hidden>
-                         net (fo=1, routed)           0.000    16.166    <hidden>
-    SLICE_X17Y84         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.280 r  <hidden>
-                         net (fo=1, routed)           0.000    16.280    <hidden>
-    SLICE_X17Y85         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    16.519 r  <hidden>
-                         net (fo=1, routed)           0.000    16.519    <hidden>
-    SLICE_X17Y85         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.573 r  <hidden>
+                         net (fo=1, routed)           0.000    16.573    <hidden>
+    SLICE_X26Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.687 r  <hidden>
+                         net (fo=1, routed)           0.000    16.687    <hidden>
+    SLICE_X26Y98         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    16.926 r  <hidden>
+                         net (fo=1, routed)           0.000    16.926    <hidden>
+    SLICE_X26Y98         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -471,79 +426,64 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.503ns  (logic 6.548ns (39.678%)  route 9.955ns (60.322%))
-  Logic Levels:           24  (CARRY4=18 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        16.910ns  (logic 5.946ns (35.163%)  route 10.964ns (64.837%))
+  Logic Levels:           19  (CARRY4=13 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.166 r  <hidden>
-                         net (fo=1, routed)           0.000    16.166    <hidden>
-    SLICE_X17Y84         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.280 r  <hidden>
-                         net (fo=1, routed)           0.000    16.280    <hidden>
-    SLICE_X17Y85         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.223    16.503 r  <hidden>
-                         net (fo=1, routed)           0.000    16.503    <hidden>
-    SLICE_X17Y85         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.573 r  <hidden>
+                         net (fo=1, routed)           0.000    16.573    <hidden>
+    SLICE_X26Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.687 r  <hidden>
+                         net (fo=1, routed)           0.000    16.687    <hidden>
+    SLICE_X26Y98         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    16.910 r  <hidden>
+                         net (fo=1, routed)           0.000    16.910    <hidden>
+    SLICE_X26Y98         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -552,76 +492,61 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.500ns  (logic 6.545ns (39.667%)  route 9.955ns (60.333%))
-  Logic Levels:           23  (CARRY4=17 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        16.907ns  (logic 5.943ns (35.152%)  route 10.964ns (64.848%))
+  Logic Levels:           18  (CARRY4=12 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.166 r  <hidden>
-                         net (fo=1, routed)           0.000    16.166    <hidden>
-    SLICE_X17Y84         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334    16.500 r  <hidden>
-                         net (fo=1, routed)           0.000    16.500    <hidden>
-    SLICE_X17Y84         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.573 r  <hidden>
+                         net (fo=1, routed)           0.000    16.573    <hidden>
+    SLICE_X26Y97         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.907 r  <hidden>
+                         net (fo=1, routed)           0.000    16.907    <hidden>
+    SLICE_X26Y97         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -630,76 +555,61 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.479ns  (logic 6.524ns (39.590%)  route 9.955ns (60.410%))
-  Logic Levels:           23  (CARRY4=17 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        16.886ns  (logic 5.922ns (35.071%)  route 10.964ns (64.929%))
+  Logic Levels:           18  (CARRY4=12 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.166 r  <hidden>
-                         net (fo=1, routed)           0.000    16.166    <hidden>
-    SLICE_X17Y84         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313    16.479 r  <hidden>
-                         net (fo=1, routed)           0.000    16.479    <hidden>
-    SLICE_X17Y84         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.573 r  <hidden>
+                         net (fo=1, routed)           0.000    16.573    <hidden>
+    SLICE_X26Y97         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    16.886 r  <hidden>
+                         net (fo=1, routed)           0.000    16.886    <hidden>
+    SLICE_X26Y97         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -708,76 +618,61 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.405ns  (logic 6.450ns (39.318%)  route 9.955ns (60.682%))
-  Logic Levels:           23  (CARRY4=17 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        16.812ns  (logic 5.848ns (34.785%)  route 10.964ns (65.215%))
+  Logic Levels:           18  (CARRY4=12 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.166 r  <hidden>
-                         net (fo=1, routed)           0.000    16.166    <hidden>
-    SLICE_X17Y84         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    16.405 r  <hidden>
-                         net (fo=1, routed)           0.000    16.405    <hidden>
-    SLICE_X17Y84         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.573 r  <hidden>
+                         net (fo=1, routed)           0.000    16.573    <hidden>
+    SLICE_X26Y97         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    16.812 r  <hidden>
+                         net (fo=1, routed)           0.000    16.812    <hidden>
+    SLICE_X26Y97         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -786,76 +681,61 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.389ns  (logic 6.434ns (39.259%)  route 9.955ns (60.741%))
-  Logic Levels:           23  (CARRY4=17 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        16.796ns  (logic 5.832ns (34.723%)  route 10.964ns (65.277%))
+  Logic Levels:           18  (CARRY4=12 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.166 r  <hidden>
-                         net (fo=1, routed)           0.000    16.166    <hidden>
-    SLICE_X17Y84         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.223    16.389 r  <hidden>
-                         net (fo=1, routed)           0.000    16.389    <hidden>
-    SLICE_X17Y84         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.573 r  <hidden>
+                         net (fo=1, routed)           0.000    16.573    <hidden>
+    SLICE_X26Y97         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    16.796 r  <hidden>
+                         net (fo=1, routed)           0.000    16.796    <hidden>
+    SLICE_X26Y97         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -864,73 +744,58 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.386ns  (logic 6.431ns (39.248%)  route 9.955ns (60.752%))
-  Logic Levels:           22  (CARRY4=16 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        16.793ns  (logic 5.829ns (34.712%)  route 10.964ns (65.288%))
+  Logic Levels:           17  (CARRY4=11 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_O[1])
-                                                      0.334    16.386 r  <hidden>
-                         net (fo=1, routed)           0.000    16.386    <hidden>
-    SLICE_X17Y83         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.793 r  <hidden>
+                         net (fo=1, routed)           0.000    16.793    <hidden>
+    SLICE_X26Y96         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -939,73 +804,58 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        16.365ns  (logic 6.410ns (39.170%)  route 9.955ns (60.830%))
-  Logic Levels:           22  (CARRY4=16 FDRE=1 LUT2=4 LUT4=1)
+  Data Path Delay:        16.772ns  (logic 5.808ns (34.630%)  route 10.964ns (65.370%))
+  Logic Levels:           17  (CARRY4=11 FDRE=1 LUT2=4 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X20Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X20Y67         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
-                         net (fo=109, routed)         5.285     5.803    <hidden>
-    SLICE_X11Y59         LUT4 (Prop_lut4_I1_O)        0.124     5.927 r  <hidden>
-                         net (fo=1, routed)           0.000     5.927    <hidden>
-    SLICE_X11Y59         CARRY4 (Prop_carry4_S[1]_O[3])
-                                                      0.640     6.567 r  <hidden>
-                         net (fo=2, routed)           1.234     7.801    <hidden>
-    SLICE_X11Y68         LUT2 (Prop_lut2_I0_O)        0.306     8.107 r  <hidden>
-                         net (fo=1, routed)           0.000     8.107    <hidden>
-    SLICE_X11Y68         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     8.657 r  <hidden>
-                         net (fo=1, routed)           0.000     8.657    <hidden>
-    SLICE_X11Y69         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313     8.970 r  <hidden>
-                         net (fo=2, routed)           0.974     9.944    <hidden>
-    SLICE_X14Y70         LUT2 (Prop_lut2_I0_O)        0.306    10.250 r  <hidden>
-                         net (fo=1, routed)           0.000    10.250    <hidden>
-    SLICE_X14Y70         CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550    10.800 r  <hidden>
-                         net (fo=1, routed)           0.000    10.800    <hidden>
-    SLICE_X14Y71         CARRY4 (Prop_carry4_CI_O[2])
-                                                      0.239    11.039 r  <hidden>
-                         net (fo=2, routed)           1.261    12.300    <hidden>
-    SLICE_X15Y72         LUT2 (Prop_lut2_I0_O)        0.302    12.602 r  <hidden>
-                         net (fo=1, routed)           0.000    12.602    <hidden>
-    SLICE_X15Y72         CARRY4 (Prop_carry4_S[2]_CO[3])
-                                                      0.398    13.000 r  <hidden>
-                         net (fo=1, routed)           0.000    13.000    <hidden>
-    SLICE_X15Y73         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.114 r  <hidden>
-                         net (fo=1, routed)           0.000    13.114    <hidden>
-    SLICE_X15Y74         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    13.228 r  <hidden>
-                         net (fo=1, routed)           0.009    13.237    <hidden>
-    SLICE_X15Y75         CARRY4 (Prop_carry4_CI_O[0])
-                                                      0.222    13.459 r  <hidden>
-                         net (fo=2, routed)           1.192    14.651    <hidden>
-    SLICE_X17Y77         LUT2 (Prop_lut2_I0_O)        0.299    14.950 r  <hidden>
-                         net (fo=1, routed)           0.000    14.950    <hidden>
-    SLICE_X17Y77         CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.532    15.482 r  <hidden>
-                         net (fo=1, routed)           0.000    15.482    <hidden>
-    SLICE_X17Y78         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.596 r  <hidden>
-                         net (fo=1, routed)           0.000    15.596    <hidden>
-    SLICE_X17Y79         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.710 r  <hidden>
-                         net (fo=1, routed)           0.000    15.710    <hidden>
-    SLICE_X17Y80         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.824 r  <hidden>
-                         net (fo=1, routed)           0.000    15.824    <hidden>
-    SLICE_X17Y81         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    15.938 r  <hidden>
-                         net (fo=1, routed)           0.000    15.938    <hidden>
-    SLICE_X17Y82         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.114    16.052 r  <hidden>
-                         net (fo=1, routed)           0.000    16.052    <hidden>
-    SLICE_X17Y83         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.313    16.365 r  <hidden>
-                         net (fo=1, routed)           0.000    16.365    <hidden>
-    SLICE_X17Y83         FDRE                                         r  <hidden>
+    SLICE_X20Y74         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X20Y74         FDRE (Prop_fdre_C_Q)         0.518     0.518 r  <hidden>
+                         net (fo=361, routed)         6.641     7.159    <hidden>
+    SLICE_X43Y90         LUT3 (Prop_lut3_I1_O)        0.124     7.283 r  <hidden>
+                         net (fo=1, routed)           0.000     7.283    <hidden>
+    SLICE_X43Y90         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     7.684 r  <hidden>
+                         net (fo=1, routed)           0.000     7.684    <hidden>
+    SLICE_X43Y91         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     8.018 r  <hidden>
+                         net (fo=1, routed)           0.938     8.957    <hidden>
+    SLICE_X40Y91         LUT2 (Prop_lut2_I1_O)        0.303     9.260 r  <hidden>
+                         net (fo=1, routed)           0.000     9.260    <hidden>
+    SLICE_X40Y91         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     9.810 r  <hidden>
+                         net (fo=1, routed)           0.000     9.810    <hidden>
+    SLICE_X40Y92         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    10.032 r  <hidden>
+                         net (fo=3, routed)           0.851    10.882    <hidden>
+    SLICE_X39Y91         LUT2 (Prop_lut2_I0_O)        0.299    11.181 r  <hidden>
+                         net (fo=1, routed)           0.000    11.181    <hidden>
+    SLICE_X39Y91         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    11.582 r  <hidden>
+                         net (fo=1, routed)           0.000    11.582    <hidden>
+    SLICE_X39Y92         CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.271    11.853 r  <hidden>
+                         net (fo=2, routed)           1.324    13.177    <hidden>
+    SLICE_X27Y88         LUT2 (Prop_lut2_I1_O)        0.373    13.550 r  <hidden>
+                         net (fo=1, routed)           0.000    13.550    <hidden>
+    SLICE_X27Y88         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    14.082 r  <hidden>
+                         net (fo=1, routed)           0.000    14.082    <hidden>
+    SLICE_X27Y89         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.304 r  <hidden>
+                         net (fo=2, routed)           1.209    15.514    <hidden>
+    SLICE_X26Y94         LUT2 (Prop_lut2_I0_O)        0.299    15.813 r  <hidden>
+                         net (fo=1, routed)           0.000    15.813    <hidden>
+    SLICE_X26Y94         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    16.345 r  <hidden>
+                         net (fo=1, routed)           0.000    16.345    <hidden>
+    SLICE_X26Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.459 r  <hidden>
+                         net (fo=1, routed)           0.000    16.459    <hidden>
+    SLICE_X26Y96         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    16.772 r  <hidden>
+                         net (fo=1, routed)           0.000    16.772    <hidden>
+    SLICE_X26Y96         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 
@@ -1020,15 +870,49 @@ Slack:                    inf
   Destination:            <hidden>
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Data Path Delay:        0.187ns  (logic 0.128ns (68.470%)  route 0.059ns (31.530%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X21Y67         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X21Y67         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
-                         net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X20Y67         SRL16E                                       r  <hidden>
+    SLICE_X14Y63         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X14Y63         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  <hidden>
+                         net (fo=1, routed)           0.059     0.187    <hidden>
+    SLICE_X15Y63         FDRE                                         r  <hidden>
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 <hidden>
+                            (rising edge-triggered cell FDRE)
+  Destination:            <hidden>
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.187ns  (logic 0.128ns (68.397%)  route 0.059ns (31.603%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y38         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X29Y38         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  <hidden>
+                         net (fo=1, routed)           0.059     0.187    <hidden>
+    SLICE_X28Y38         SRLC32E                                      r  <hidden>
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 <hidden>
+                            (rising edge-triggered cell FDRE)
+  Destination:            <hidden>
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.196ns  (logic 0.128ns (65.396%)  route 0.068ns (34.604%))
+  Logic Levels:           1  (FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y58         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X33Y58         FDRE (Prop_fdre_C_Q)         0.128     0.128 r  <hidden>
+                         net (fo=2, routed)           0.068     0.196    <hidden>
+    SLICE_X33Y58         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1042,10 +926,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y72          FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X1Y72          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
+    SLICE_X25Y71         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X25Y71         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
                          net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X1Y72          FDRE                                         r  <hidden>
+    SLICE_X24Y71         SRL16E                                       r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1059,10 +943,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X1Y98          FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X1Y98          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
+    SLICE_X41Y50         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X41Y50         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
                          net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X1Y98          FDRE                                         r  <hidden>
+    SLICE_X41Y50         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1076,10 +960,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y92          FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X3Y92          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
+    SLICE_X43Y27         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X43Y27         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
                          net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X3Y92          FDRE                                         r  <hidden>
+    SLICE_X42Y27         SRL16E                                       r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1093,10 +977,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X13Y95         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X13Y95         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
+    SLICE_X43Y50         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X43Y50         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
                          net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X13Y95         FDRE                                         r  <hidden>
+    SLICE_X43Y50         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1110,10 +994,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y90         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X19Y90         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
+    SLICE_X37Y55         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X37Y55         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
                          net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X19Y90         FDRE                                         r  <hidden>
+    SLICE_X37Y55         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1127,10 +1011,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X31Y96         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X31Y96         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
+    SLICE_X37Y55         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X37Y55         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
                          net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X31Y96         FDRE                                         r  <hidden>
+    SLICE_X37Y55         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -1144,44 +1028,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y86          FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X3Y86          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
+    SLICE_X37Y51         FDRE                         0.000     0.000 r  <hidden>
+    SLICE_X37Y51         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
                          net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X3Y86          FDRE                                         r  <hidden>
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 <hidden>
-                            (rising edge-triggered cell FDRE)
-  Destination:            <hidden>
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X11Y66         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X11Y66         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
-                         net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X11Y66         FDRE                                         r  <hidden>
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 <hidden>
-                            (rising edge-triggered cell FDRE)
-  Destination:            <hidden>
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X39Y86         FDRE                         0.000     0.000 r  <hidden>
-    SLICE_X39Y86         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  <hidden>
-                         net (fo=1, routed)           0.056     0.197    <hidden>
-    SLICE_X38Y86         SRL16E                                       r  <hidden>
+    SLICE_X37Y51         FDRE                                         r  <hidden>
   -------------------------------------------------------------------    -------------------
 
 

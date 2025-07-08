@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Jul  7 16:01:56 2025
-# Process ID         : 1672
+# Start of session at: Tue Jul  8 09:51:53 2025
+# Process ID         : 29720
 # Current directory  : D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1
 # Command line       : vivado.exe -log design_singletoneFFT_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_singletoneFFT_wrapper.tcl
 # Log file           : D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/design_singletoneFFT_wrapper.vds
@@ -17,9 +17,9 @@
 # CPU Physical cores : 10
 # CPU Logical cores  : 12
 # Host memory        : 16850 MB
-# Swap memory        : 4563 MB
-# Total Virtual      : 21413 MB
-# Available Virtual  : 8777 MB
+# Swap memory        : 4160 MB
+# Total Virtual      : 21010 MB
+# Available Virtual  : 9335 MB
 #-----------------------------------------------------------
 source design_singletoneFFT_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -40,49 +40,29 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21848
+INFO: [Synth 8-7075] Helper process launched with PID 15692
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1090.137 ; gain = 466.602
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1088.992 ; gain = 466.617
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_wrapper' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/hdl/design_singletoneFFT_wrapper.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:60]
-INFO: [Synth 8-6157] synthesizing module 'CommandLogic_imp_QZ46PD' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_c_counter_binary_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_c_counter_binary_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_c_counter_binary_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_c_counter_binary_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlconstant_0_1' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/synth/design_singletoneFFT_xlconstant_0_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlconstant_0_1' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/synth/design_singletoneFFT_xlconstant_0_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlconstant_0_2' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_2/synth/design_singletoneFFT_xlconstant_0_2.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant__parameterized0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant__parameterized0' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlconstant_0_2' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_2/synth/design_singletoneFFT_xlconstant_0_2.v:53]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlconstant_2_1' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_2_1/synth/design_singletoneFFT_xlconstant_2_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant__parameterized1' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant__parameterized1' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlconstant_2_1' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_2_1/synth/design_singletoneFFT_xlconstant_2_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlconstant_3_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_3_0/synth/design_singletoneFFT_xlconstant_3_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant__parameterized2' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant__parameterized2' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlconstant_3_0' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_3_0/synth/design_singletoneFFT_xlconstant_3_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlconstant_4_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/synth/design_singletoneFFT_xlconstant_4_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlconstant_4_0' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/synth/design_singletoneFFT_xlconstant_4_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'CommandLogic_imp_QZ46PD' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_blk_mem_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_blk_mem_gen_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'douta' of module 'design_singletoneFFT_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:103]
-WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'design_singletoneFFT_blk_mem_gen_0_0' has 12 connections declared, but only 11 given [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:103]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_c_addsub_0_1' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_c_addsub_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_c_addsub_0_1' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_c_addsub_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_latch_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_latch_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_latch_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_latch_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mag_fft_imp_152RPYJ' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:156]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_c_addsub_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_c_addsub_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_c_addsub_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_c_addsub_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_mult_gen_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_mult_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_mult_gen_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_mult_gen_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_mult_gen_0_1' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_mult_gen_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_mult_gen_0_1' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_mult_gen_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_blk_mem_gen_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'douta' of module 'design_singletoneFFT_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:43]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'design_singletoneFFT_blk_mem_gen_0_0' has 12 connections declared, but only 11 given [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:43]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_c_addsub_0_1' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_c_addsub_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_c_addsub_0_1' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_c_addsub_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_c_counter_binary_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_c_counter_binary_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_c_counter_binary_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_c_counter_binary_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_latch_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_latch_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_latch_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_latch_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mag_fft_imp_152RPYJ' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:107]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_c_addsub_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_c_addsub_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_c_addsub_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_c_addsub_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_mult_gen_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_mult_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_mult_gen_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_mult_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_mult_gen_0_1' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_mult_gen_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_mult_gen_0_1' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_mult_gen_0_1_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlslice_0_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_0/synth/design_singletoneFFT_xlslice_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
@@ -91,26 +71,36 @@ INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlslice_0_1' [d:/
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_4_xlslice__parameterized0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_4_xlslice__parameterized0' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlslice_0_1' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_1/synth/design_singletoneFFT_xlslice_0_1.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'mag_fft_imp_152RPYJ' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:156]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_mux_acc_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_mux_acc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_mux_acc_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_mux_acc_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_signal_delay_0_2' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_signal_delay_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_signal_delay_0_2' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_signal_delay_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_signal_delay_1_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_signal_delay_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_signal_delay_1_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_signal_delay_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xfft_0_1' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_xfft_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xfft_0_1' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-1672-GiridharKING/realtime/design_singletoneFFT_xfft_0_1_stub.v:6]
-WARNING: [Synth 8-7071] port 's_axis_config_tready' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7071] port 'm_axis_data_tvalid' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7071] port 'event_frame_started' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7071] port 'event_tlast_unexpected' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7071] port 'event_tlast_missing' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7071] port 'event_status_channel_halt' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7071] port 'event_data_in_channel_halt' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7071] port 'event_data_out_channel_halt' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-WARNING: [Synth 8-7023] instance 'xfft_0' of module 'design_singletoneFFT_xfft_0_1' has 18 connections declared, but only 9 given [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:144]
-INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'mag_fft_imp_152RPYJ' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:107]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_mux_acc_0_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_mux_acc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_mux_acc_0_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_mux_acc_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_signal_delay_0_2' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_signal_delay_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_signal_delay_0_2' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_signal_delay_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_signal_delay_1_0' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_signal_delay_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_signal_delay_1_0' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_signal_delay_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xfft_0_1' [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_xfft_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xfft_0_1' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/.Xil/Vivado-29720-GiridharKING/realtime/design_singletoneFFT_xfft_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_config_tready' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7071] port 's_axis_data_tready' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7071] port 'm_axis_data_tvalid' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7071] port 'event_frame_started' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7071] port 'event_tlast_unexpected' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7071] port 'event_tlast_missing' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7071] port 'event_status_channel_halt' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7071] port 'event_data_in_channel_halt' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7071] port 'event_data_out_channel_halt' of module 'design_singletoneFFT_xfft_0_1' is unconnected for instance 'xfft_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+WARNING: [Synth 8-7023] instance 'xfft_0' of module 'design_singletoneFFT_xfft_0_1' has 18 connections declared, but only 9 given [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:89]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlconstant_0_1' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/synth/design_singletoneFFT_xlconstant_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlconstant_0_1' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/synth/design_singletoneFFT_xlconstant_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlconstant_1_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_1_0/synth/design_singletoneFFT_xlconstant_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant__parameterized0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant__parameterized0' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlconstant_1_0' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_1_0/synth/design_singletoneFFT_xlconstant_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_singletoneFFT_xlconstant_4_0' [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/synth/design_singletoneFFT_xlconstant_4_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_xlconstant_4_0' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/synth/design_singletoneFFT_xlconstant_4_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT' (0#1) [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/synth/design_singletoneFFT.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_singletoneFFT_wrapper' (0#1) [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/hdl/design_singletoneFFT_wrapper.v:13]
 WARNING: [Synth 8-7129] Port Din[63] in module xlslice_v1_0_4_xlslice__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[62] in module xlslice_v1_0_4_xlslice__parameterized0 is either unconnected or has no load
@@ -177,26 +167,24 @@ WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_4_xlslice is either u
 WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_4_xlslice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_4_xlslice is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1200.145 ; gain = 576.609
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1198.957 ; gain = 576.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1200.145 ; gain = 576.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1198.957 ; gain = 576.582
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1200.145 ; gain = 576.609
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1198.957 ; gain = 576.582
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1200.145 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1198.957 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/design_singletoneFFT_xfft_0_1/design_singletoneFFT_xfft_0_1_in_context.xdc] for cell 'design_singletoneFFT_i/xfft_0'
 Finished Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/design_singletoneFFT_xfft_0_1/design_singletoneFFT_xfft_0_1_in_context.xdc] for cell 'design_singletoneFFT_i/xfft_0'
-Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_c_counter_binary_0_0/design_singletoneFFT_c_counter_binary_0_0/design_singletoneFFT_c_counter_binary_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/CommandLogic/c_counter_binary_0'
-Finished Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_c_counter_binary_0_0/design_singletoneFFT_c_counter_binary_0_0/design_singletoneFFT_c_counter_binary_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/CommandLogic/c_counter_binary_0'
 Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_0/design_singletoneFFT_mult_gen_0_0/design_singletoneFFT_mult_gen_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/mag_fft/mult_gen_0'
 Finished Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_0/design_singletoneFFT_mult_gen_0_0/design_singletoneFFT_mult_gen_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/mag_fft/mult_gen_0'
 Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_1/design_singletoneFFT_mult_gen_0_1/design_singletoneFFT_mult_gen_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/mag_fft/mult_gen_1'
@@ -215,38 +203,34 @@ Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sou
 Finished Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_0_2/design_singletoneFFT_signal_delay_0_2/design_singletoneFFT_signal_delay_0_2_in_context.xdc] for cell 'design_singletoneFFT_i/signal_delay_0'
 Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/design_singletoneFFT_latch_0_0/design_singletoneFFT_latch_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/latch_0'
 Finished Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/design_singletoneFFT_latch_0_0/design_singletoneFFT_latch_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/latch_0'
+Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_c_counter_binary_0_0/design_singletoneFFT_c_counter_binary_0_0/design_singletoneFFT_c_counter_binary_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/c_counter_binary_0'
+Finished Parsing XDC File [d:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ip/design_singletoneFFT_c_counter_binary_0_0/design_singletoneFFT_c_counter_binary_0_0/design_singletoneFFT_c_counter_binary_0_0_in_context.xdc] for cell 'design_singletoneFFT_i/c_counter_binary_0'
 Parsing XDC File [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1200.145 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1202.941 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1200.145 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1202.941 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1200.145 ; gain = 576.609
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1202.941 ; gain = 580.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1200.145 ; gain = 576.609
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1202.941 ; gain = 580.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/xfft_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/CommandLogic/xlconstant_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/CommandLogic/xlconstant_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/CommandLogic/xlconstant_2. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/CommandLogic/xlconstant_3. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/CommandLogic/xlconstant_4. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/CommandLogic/c_counter_binary_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/mag_fft/mult_gen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/mag_fft/xlslice_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/mag_fft/xlslice_1. (constraint file  auto generated constraint).
@@ -258,11 +242,15 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/signal_del
 Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/mux_acc_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/signal_delay_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/latch_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/xlconstant_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/c_counter_binary_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_singletoneFFT_i/xlconstant_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1200.145 ; gain = 576.609
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1202.941 ; gain = 580.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1200.145 ; gain = 576.609
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1202.941 ; gain = 580.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -322,25 +310,25 @@ WARNING: [Synth 8-7129] Port Din[29] in module design_singletoneFFT_xlslice_0_0 
 WARNING: [Synth 8-7129] Port Din[28] in module design_singletoneFFT_xlslice_0_0 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1203.645 ; gain = 580.109
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1202.941 ; gain = 580.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1371.242 ; gain = 747.707
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1372.609 ; gain = 750.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1371.391 ; gain = 747.855
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1372.758 ; gain = 750.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1381.691 ; gain = 758.156
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1383.191 ; gain = 760.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -358,37 +346,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1597.887 ; gain = 974.352
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1599.301 ; gain = 976.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1597.887 ; gain = 974.352
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1599.301 ; gain = 976.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1597.887 ; gain = 974.352
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1599.301 ; gain = 976.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1597.887 ; gain = 974.352
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1599.301 ; gain = 976.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1597.887 ; gain = 974.352
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1599.301 ; gain = 976.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1597.887 ; gain = 974.352
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1599.301 ; gain = 976.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -400,12 +388,12 @@ Report BlackBoxes:
 +------+------------------------------------------+----------+
 |1     |design_singletoneFFT_blk_mem_gen_0_0      |         1|
 |2     |design_singletoneFFT_c_addsub_0_1         |         1|
-|3     |design_singletoneFFT_latch_0_0            |         1|
-|4     |design_singletoneFFT_mux_acc_0_0          |         1|
-|5     |design_singletoneFFT_signal_delay_0_2     |         1|
-|6     |design_singletoneFFT_signal_delay_1_0     |         1|
-|7     |design_singletoneFFT_xfft_0_1             |         1|
-|8     |design_singletoneFFT_c_counter_binary_0_0 |         1|
+|3     |design_singletoneFFT_c_counter_binary_0_0 |         1|
+|4     |design_singletoneFFT_latch_0_0            |         1|
+|5     |design_singletoneFFT_mux_acc_0_0          |         1|
+|6     |design_singletoneFFT_signal_delay_0_2     |         1|
+|7     |design_singletoneFFT_signal_delay_1_0     |         1|
+|8     |design_singletoneFFT_xfft_0_1             |         1|
 |9     |design_singletoneFFT_c_addsub_0_0         |         1|
 |10    |design_singletoneFFT_mult_gen_0_0         |         1|
 |11    |design_singletoneFFT_mult_gen_0_1         |         1|
@@ -424,29 +412,29 @@ Report Cell Usage:
 |9     |design_singletoneFFT_signal_delay_0     |     1|
 |10    |design_singletoneFFT_signal_delay_1     |     1|
 |11    |design_singletoneFFT_xfft_0             |     1|
-|12    |IBUF                                    |     2|
-|13    |OBUF                                    |    76|
+|12    |IBUF                                    |    34|
+|13    |OBUF                                    |    65|
 +------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1597.887 ; gain = 974.352
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1599.301 ; gain = 976.926
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 65 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1597.887 ; gain = 974.352
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1597.887 ; gain = 974.352
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1599.301 ; gain = 972.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1599.301 ; gain = 976.926
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1607.000 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1599.301 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1610.672 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.301 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 901fe8e0
+Synth Design complete | Checksum: e532b3ac
 INFO: [Common 17-83] Releasing license: Synthesis
-79 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
+69 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1610.672 ; gain = 1205.426
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1610.672 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1599.301 ; gain = 1195.492
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1599.301 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/GitHub/Digital-HWSW-RRI/SingleToneFFT/SingleToneFFT.runs/synth_1/design_singletoneFFT_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_singletoneFFT_wrapper_utilization_synth.rpt -pb design_singletoneFFT_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jul  7 16:02:31 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  8 09:52:32 2025...

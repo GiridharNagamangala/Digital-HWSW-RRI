@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Mon Jul  7 16:04:08 2025
+| Date             : Tue Jul  8 09:54:02 2025
 | Host             : GiridharKING running 64-bit major release  (build 9200)
 | Command          : report_power -file design_singletoneFFT_wrapper_power_routed.rpt -pb design_singletoneFFT_wrapper_power_summary_routed.pb -rpx design_singletoneFFT_wrapper_power_routed.rpx
 | Design           : design_singletoneFFT_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+-----------------------------------+
-| Total On-Chip Power (W)  | 137.919 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 131.680 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                      |
 | Power Budget Margin (W)  | NA                                |
-| Dynamic (W)              | 137.162                           |
+| Dynamic (W)              | 130.923                           |
 | Device Static (W)        | 0.757                             |
 | Effective TJA (C/W)      | 11.5                              |
 | Max Ambient (C)          | 0.0                               |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |    24.548 |    13379 |       --- |             --- |
-|   LUT as Logic           |    16.932 |     4015 |     17600 |           22.81 |
-|   CARRY4                 |     4.299 |      963 |      4400 |           21.89 |
-|   Register               |     2.037 |     4609 |     35200 |           13.09 |
-|   LUT as Shift Register  |     1.274 |      593 |      6000 |            9.88 |
+| Slice Logic              |    24.799 |    13804 |       --- |             --- |
+|   LUT as Logic           |    17.104 |     4067 |     17600 |           23.11 |
+|   CARRY4                 |     4.311 |      963 |      4400 |           21.89 |
+|   Register               |     2.065 |     4831 |     35200 |           13.72 |
+|   LUT as Shift Register  |     1.313 |      654 |      6000 |           10.90 |
 |   BUFG                   |     0.006 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |     1181 |       --- |             --- |
+|   Others                 |     0.000 |     1189 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       31 |      6000 |            0.52 |
-| Signals                  |    33.304 |     8308 |       --- |             --- |
-| Block RAM                |     1.088 |      4.5 |        60 |            7.50 |
-| DSPs                     |    13.828 |       13 |        80 |           16.25 |
-| I/O                      |    64.394 |       78 |       100 |           78.00 |
+| Signals                  |    31.738 |     8565 |       --- |             --- |
+| Block RAM                |     1.095 |      4.5 |        60 |            7.50 |
+| DSPs                     |    13.829 |       13 |        80 |           16.25 |
+| I/O                      |    59.463 |       99 |       100 |           99.00 |
 | Static Power             |     0.757 |          |           |                 |
-| Total                    |   137.919 |          |           |                 |
+| Total                    |   131.680 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,16 +75,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    72.849 |      72.716 |      0.133 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     5.311 |       5.271 |      0.040 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    71.668 |      71.535 |      0.133 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     4.897 |       4.857 |      0.040 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |    30.502 |      30.501 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |    28.106 |      28.105 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.074 |       0.057 |      0.016 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.074 |       0.058 |      0.016 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -149,22 +149,22 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| design_singletoneFFT_wrapper |   137.162 |
-|   design_singletoneFFT_i     |    72.575 |
-|     CommandLogic             |     0.309 |
-|       c_counter_binary_0     |     0.309 |
-|     blk_mem_gen_0            |     1.022 |
-|       U0                     |     1.022 |
-|     c_addsub_0               |     2.853 |
-|       U0                     |     2.853 |
-|     mag_fft                  |    24.535 |
-|       c_addsub_0             |     1.806 |
-|       mult_gen_0             |    12.975 |
-|       mult_gen_1             |     9.755 |
-|     signal_delay_1           |     0.163 |
-|       inst                   |     0.163 |
-|     xfft_0                   |    43.693 |
-|       U0                     |    43.693 |
+| design_singletoneFFT_wrapper |   130.923 |
+|   design_singletoneFFT_i     |    71.163 |
+|     blk_mem_gen_0            |     0.958 |
+|       U0                     |     0.958 |
+|     c_addsub_0               |     2.974 |
+|       U0                     |     2.974 |
+|     c_counter_binary_0       |     0.119 |
+|       U0                     |     0.119 |
+|     mag_fft                  |    23.372 |
+|       c_addsub_0             |     1.556 |
+|       mult_gen_0             |    12.079 |
+|       mult_gen_1             |     9.737 |
+|     signal_delay_1           |     0.166 |
+|       inst                   |     0.166 |
+|     xfft_0                   |    43.574 |
+|       U0                     |    43.574 |
 +------------------------------+-----------+
 
 

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Jul  8 15:47:54 2025
+# Process ID         : 36688
+# Current directory  : D:/GitHub/Digital-HWSW-RRI/DigitalReceiverPipeline/DigitalReceiverPipeline.runs/synth_1
+# Command line       : vivado.exe -log constgen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source constgen.tcl
+# Log file           : D:/GitHub/Digital-HWSW-RRI/DigitalReceiverPipeline/DigitalReceiverPipeline.runs/synth_1/constgen.vds
+# Journal file       : D:/GitHub/Digital-HWSW-RRI/DigitalReceiverPipeline/DigitalReceiverPipeline.runs/synth_1\vivado.jou
+# Running On         : GiridharKING
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16850 MB
+# Swap memory        : 4160 MB
+# Total Virtual      : 21010 MB
+# Available Virtual  : 6702 MB
+#-----------------------------------------------------------
+source constgen.tcl -notrace

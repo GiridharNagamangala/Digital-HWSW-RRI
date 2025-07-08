@@ -246,9 +246,6 @@ vlog -work xlconstant_v1_1_9  -incr -mfcu  \
 
 vlog -work xil_defaultlib  -incr -mfcu  \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/sim/design_singletoneFFT_xlconstant_0_1.v" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_2/sim/design_singletoneFFT_xlconstant_0_2.v" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_2_1/sim/design_singletoneFFT_xlconstant_2_1.v" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_3_0/sim/design_singletoneFFT_xlconstant_3_0.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/sim/design_singletoneFFT_xlconstant_4_0.v" \
 
 vcom -work c_counter_binary_v12_0_20  -93  \

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF9C2B76A00A0B6CC",
+      "boundary_crc": "0x4E2583913C5AEC43",
       "device": "xc7z010clg400-1",
       "gen_directory": "../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT",
       "name": "design_singletoneFFT",
@@ -12,14 +12,6 @@
     },
     "design_tree": {
       "xfft_0": "",
-      "CommandLogic": {
-        "xlconstant_0": "",
-        "xlconstant_1": "",
-        "xlconstant_2": "",
-        "xlconstant_3": "",
-        "xlconstant_4": "",
-        "c_counter_binary_0": ""
-      },
       "mag_fft": {
         "mult_gen_0": "",
         "xlslice_0": "",
@@ -32,13 +24,21 @@
       "signal_delay_1": "",
       "mux_acc_0": "",
       "signal_delay_0": "",
-      "latch_0": ""
+      "latch_0": "",
+      "xlconstant_0": "",
+      "xlconstant_4": "",
+      "c_counter_binary_0": "",
+      "xlconstant_1": ""
     },
     "ports": {
       "aclk_0": {
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "SCLR_RSTx",
+            "value_src": "default"
+          },
           "CLK_DOMAIN": {
             "value": "design_singletoneFFT_aclk_0",
             "value_src": "default"
@@ -64,9 +64,6 @@
       "m_axis_data_tlast_0": {
         "direction": "O"
       },
-      "CE_BRAM_ADDR": {
-        "direction": "I"
-      },
       "S_0": {
         "type": "data",
         "direction": "O",
@@ -85,22 +82,25 @@
           }
         }
       },
-      "latched_tlast": {
-        "direction": "O",
-        "left": "0",
+      "SCLR_RSTx": {
+        "direction": "I"
+      },
+      "s_axis_data_tdata": {
+        "direction": "I",
+        "left": "31",
         "right": "0"
       },
-      "Counter": {
+      "mag_out": {
         "direction": "O",
-        "left": "9",
+        "left": "63",
         "right": "0",
         "parameters": {
           "LAYERED_METADATA": {
             "value": [
               "xilinx.com:interface:datatypes:1.0 {",
               "DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value data} bitwidth {attribs {resolve_type generated dependency bitwidth format long minimum",
-              "{} maximum {}} value 10} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool",
-              "minimum {} maximum {}} value false}}}} DATA_WIDTH 10",
+              "{} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type generated dependency signed format",
+              "bool minimum {} maximum {}} value TRUE}}}} DATA_WIDTH 64",
               "}"
             ],
             "value_src": "ip_prop"
@@ -130,192 +130,6 @@
           },
           "target_clock_frequency": {
             "value": "125"
-          }
-        }
-      },
-      "CommandLogic": {
-        "ports": {
-          "data_tdata": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "config_tdata": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "config_tvalid_xrst": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
-          },
-          "data_tvalid_en_acc": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
-          },
-          "Q_bram_acc": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          },
-          "CLK": {
-            "direction": "I"
-          },
-          "CE": {
-            "direction": "I"
-          },
-          "SCLR": {
-            "direction": "I"
-          },
-          "bram_wea": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
-          }
-        },
-        "components": {
-          "xlconstant_0": {
-            "vlnv": "xilinx.com:ip:xlconstant:1.1",
-            "ip_revision": "9",
-            "xci_name": "design_singletoneFFT_xlconstant_0_1",
-            "xci_path": "ip\\design_singletoneFFT_xlconstant_0_1\\design_singletoneFFT_xlconstant_0_1.xci",
-            "inst_hier_path": "CommandLogic/xlconstant_0",
-            "parameters": {
-              "CONST_VAL": {
-                "value": "0"
-              },
-              "CONST_WIDTH": {
-                "value": "8"
-              }
-            }
-          },
-          "xlconstant_1": {
-            "vlnv": "xilinx.com:ip:xlconstant:1.1",
-            "ip_revision": "9",
-            "xci_name": "design_singletoneFFT_xlconstant_0_2",
-            "xci_path": "ip\\design_singletoneFFT_xlconstant_0_2\\design_singletoneFFT_xlconstant_0_2.xci",
-            "inst_hier_path": "CommandLogic/xlconstant_1",
-            "parameters": {
-              "CONST_VAL": {
-                "value": "1"
-              },
-              "CONST_WIDTH": {
-                "value": "32"
-              }
-            }
-          },
-          "xlconstant_2": {
-            "vlnv": "xilinx.com:ip:xlconstant:1.1",
-            "ip_revision": "9",
-            "xci_name": "design_singletoneFFT_xlconstant_2_1",
-            "xci_path": "ip\\design_singletoneFFT_xlconstant_2_1\\design_singletoneFFT_xlconstant_2_1.xci",
-            "inst_hier_path": "CommandLogic/xlconstant_2",
-            "parameters": {
-              "CONST_VAL": {
-                "value": "0"
-              }
-            }
-          },
-          "xlconstant_3": {
-            "vlnv": "xilinx.com:ip:xlconstant:1.1",
-            "ip_revision": "9",
-            "xci_name": "design_singletoneFFT_xlconstant_3_0",
-            "xci_path": "ip\\design_singletoneFFT_xlconstant_3_0\\design_singletoneFFT_xlconstant_3_0.xci",
-            "inst_hier_path": "CommandLogic/xlconstant_3"
-          },
-          "xlconstant_4": {
-            "vlnv": "xilinx.com:ip:xlconstant:1.1",
-            "ip_revision": "9",
-            "xci_name": "design_singletoneFFT_xlconstant_4_0",
-            "xci_path": "ip\\design_singletoneFFT_xlconstant_4_0\\design_singletoneFFT_xlconstant_4_0.xci",
-            "inst_hier_path": "CommandLogic/xlconstant_4",
-            "parameters": {
-              "CONST_VAL": {
-                "value": "1"
-              },
-              "CONST_WIDTH": {
-                "value": "1"
-              }
-            }
-          },
-          "c_counter_binary_0": {
-            "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
-            "ip_revision": "20",
-            "xci_name": "design_singletoneFFT_c_counter_binary_0_0",
-            "xci_path": "ip\\design_singletoneFFT_c_counter_binary_0_0\\design_singletoneFFT_c_counter_binary_0_0.xci",
-            "inst_hier_path": "CommandLogic/c_counter_binary_0",
-            "parameters": {
-              "CE": {
-                "value": "true"
-              },
-              "Load": {
-                "value": "false"
-              },
-              "Output_Width": {
-                "value": "10"
-              },
-              "SCLR": {
-                "value": "true"
-              }
-            }
-          }
-        },
-        "nets": {
-          "CE_1": {
-            "ports": [
-              "CE",
-              "c_counter_binary_0/CE"
-            ]
-          },
-          "CLK_1": {
-            "ports": [
-              "CLK",
-              "c_counter_binary_0/CLK"
-            ]
-          },
-          "SCLR_1": {
-            "ports": [
-              "SCLR",
-              "c_counter_binary_0/SCLR"
-            ]
-          },
-          "c_counter_binary_0_Q": {
-            "ports": [
-              "c_counter_binary_0/Q",
-              "Q_bram_acc"
-            ]
-          },
-          "xlconstant_0_dout": {
-            "ports": [
-              "xlconstant_0/dout",
-              "config_tdata"
-            ]
-          },
-          "xlconstant_1_dout": {
-            "ports": [
-              "xlconstant_1/dout",
-              "data_tdata"
-            ]
-          },
-          "xlconstant_2_dout": {
-            "ports": [
-              "xlconstant_2/dout",
-              "config_tvalid_xrst"
-            ]
-          },
-          "xlconstant_3_dout": {
-            "ports": [
-              "xlconstant_3/dout",
-              "data_tvalid_en_acc"
-            ]
-          },
-          "xlconstant_4_dout": {
-            "ports": [
-              "xlconstant_4/dout",
-              "bram_wea"
-            ]
           }
         }
       },
@@ -746,28 +560,77 @@
             "right": "0"
           }
         }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "design_singletoneFFT_xlconstant_0_1",
+        "xci_path": "ip\\design_singletoneFFT_xlconstant_0_1\\design_singletoneFFT_xlconstant_0_1.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
+      "xlconstant_4": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "design_singletoneFFT_xlconstant_4_0",
+        "xci_path": "ip\\design_singletoneFFT_xlconstant_4_0\\design_singletoneFFT_xlconstant_4_0.xci",
+        "inst_hier_path": "xlconstant_4",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "1"
+          },
+          "CONST_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "c_counter_binary_0": {
+        "vlnv": "xilinx.com:ip:c_counter_binary:12.0",
+        "ip_revision": "20",
+        "xci_name": "design_singletoneFFT_c_counter_binary_0_0",
+        "xci_path": "ip\\design_singletoneFFT_c_counter_binary_0_0\\design_singletoneFFT_c_counter_binary_0_0.xci",
+        "inst_hier_path": "c_counter_binary_0",
+        "parameters": {
+          "CE": {
+            "value": "true"
+          },
+          "Load": {
+            "value": "false"
+          },
+          "Output_Width": {
+            "value": "10"
+          },
+          "SCLR": {
+            "value": "true"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "design_singletoneFFT_xlconstant_1_0",
+        "xci_path": "ip\\design_singletoneFFT_xlconstant_1_0\\design_singletoneFFT_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1"
       }
     },
     "nets": {
-      "CE_BRAM_ADDR_1": {
-        "ports": [
-          "CE_BRAM_ADDR",
-          "CommandLogic/CE",
-          "blk_mem_gen_0/ena",
-          "blk_mem_gen_0/enb"
-        ]
-      },
       "CommandLogic_Q_bram_acc": {
         "ports": [
-          "CommandLogic/Q_bram_acc",
-          "Counter",
+          "c_counter_binary_0/Q",
           "blk_mem_gen_0/addra",
           "signal_delay_1/din"
         ]
       },
       "CommandLogic_bram_wea": {
         "ports": [
-          "CommandLogic/bram_wea",
+          "xlconstant_4/dout",
           "blk_mem_gen_0/wea",
           "blk_mem_gen_0/web"
         ]
@@ -776,14 +639,14 @@
         "ports": [
           "aclk_0",
           "mag_fft/aclk_0",
-          "CommandLogic/CLK",
           "blk_mem_gen_0/clka",
           "blk_mem_gen_0/clkb",
           "c_addsub_0/CLK",
           "xfft_0/aclk",
           "mux_acc_0/clk",
           "signal_delay_0/clk",
-          "signal_delay_1/clk"
+          "signal_delay_1/clk",
+          "c_counter_binary_0/CLK"
         ]
       },
       "blk_mem_gen_0_doutb": {
@@ -801,26 +664,23 @@
       },
       "inputs_dout": {
         "ports": [
-          "CommandLogic/data_tvalid_en_acc",
+          "xlconstant_1/dout",
           "c_addsub_0/CE",
-          "xfft_0/s_axis_data_tvalid"
-        ]
-      },
-      "inputs_dout_0": {
-        "ports": [
-          "CommandLogic/data_tdata",
-          "xfft_0/s_axis_data_tdata"
+          "xfft_0/s_axis_data_tvalid",
+          "blk_mem_gen_0/ena",
+          "blk_mem_gen_0/enb",
+          "c_counter_binary_0/CE"
         ]
       },
       "inputs_dout_1": {
         "ports": [
-          "CommandLogic/config_tdata",
+          "xlconstant_0/dout",
           "xfft_0/s_axis_config_tdata"
         ]
       },
       "inputs_dout_2": {
         "ports": [
-          "CommandLogic/config_tvalid_xrst",
+          "SCLR_RSTx",
           "c_addsub_0/SCLR",
           "xfft_0/s_axis_config_tvalid",
           "signal_delay_0/rst",
@@ -830,20 +690,26 @@
       "latch_0_sig_out": {
         "ports": [
           "latch_0/sig_out",
-          "latched_tlast",
           "mux_acc_0/sel"
         ]
       },
       "mag_fft_mag_out": {
         "ports": [
           "mag_fft/mag_out",
-          "c_addsub_0/A"
+          "c_addsub_0/A",
+          "mag_out"
         ]
       },
       "mux_acc_0_val_out": {
         "ports": [
           "mux_acc_0/val_out",
           "c_addsub_0/B"
+        ]
+      },
+      "s_axis_data_tdata_1": {
+        "ports": [
+          "s_axis_data_tdata",
+          "xfft_0/s_axis_data_tdata"
         ]
       },
       "signal_delay_0_dout": {
@@ -868,8 +734,8 @@
         "ports": [
           "xfft_0/m_axis_data_tlast",
           "m_axis_data_tlast_0",
-          "CommandLogic/SCLR",
-          "signal_delay_0/din"
+          "signal_delay_0/din",
+          "c_counter_binary_0/SCLR"
         ]
       }
     }

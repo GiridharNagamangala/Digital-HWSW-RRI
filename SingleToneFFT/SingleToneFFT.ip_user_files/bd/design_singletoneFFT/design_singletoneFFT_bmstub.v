@@ -11,12 +11,15 @@ module design_singletoneFFT (
   CE_BRAM_ADDR,
   S_0,
   latched_tlast,
-  Counter
+  Counter,
+  SCLR_RSTx,
+  CE_tvalidx,
+  s_axis_data_tdata
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ACLK_0 CLK" *)
   (* X_INTERFACE_MODE = "slave CLK.ACLK_0" *)
-  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_singletoneFFT_aclk_0, INSERT_VIP 0" *)
+  (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ACLK_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_singletoneFFT_aclk_0, ASSOCIATED_RESET SCLR_RSTx, INSERT_VIP 0" *)
   input aclk_0;
   (* X_INTERFACE_IGNORE = "true" *)
   output m_axis_data_tlast_0;
@@ -30,6 +33,12 @@ module design_singletoneFFT (
   output [0:0]latched_tlast;
   (* X_INTERFACE_IGNORE = "true" *)
   output [9:0]Counter;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input SCLR_RSTx;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input CE_tvalidx;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input [31:0]s_axis_data_tdata;
 
   // stub module has no contents
 
