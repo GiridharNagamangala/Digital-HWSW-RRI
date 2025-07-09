@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul  9 15:44:33 2025" VIVADOVERSION="2024.2">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_pipeline" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc_clk_n_i" SIGIS="clk" SIGNAME="External_Ports_adc_clk_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="system_0" PORT="adc_clk_n_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc_clk_p_i" SIGIS="clk" SIGNAME="External_Ports_adc_clk_p_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="system_0" PORT="adc_clk_p_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="13" NAME="adc_dat_a_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_adc_dat_a_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="system_0" PORT="adc_dat_a_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="13" NAME="adc_dat_b_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_adc_dat_b_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="system_0" PORT="adc_dat_b_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="daisy_n_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_daisy_n_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="system_0" PORT="daisy_n_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="daisy_p_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_daisy_p_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="system_0" PORT="daisy_p_i"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE BD="design_singletoneFFT_inst_1" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/design_singletoneFFT_0" INSTANCE="design_singletoneFFT_0" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="design_singletoneFFT.bd"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="design_singletoneFFT.bd"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="design_singletoneFFT.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="design_singletoneFFT.bd"/>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="TRAINING_MODULE" VALUE="design_singletoneFFT.bd"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="12" NAME="BRAM_PORTB_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="BRAM_PORTA_0_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_clk" SIGIS="clk" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="BRAM_PORTA_0_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="BRAM_PORTB_0_din" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_din">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="BRAM_PORTA_0_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="BRAM_PORTB_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="BRAM_PORTA_0_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_en" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="BRAM_PORTA_0_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="BRAM_PORTB_0_rst" SIGIS="rst" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="BRAM_PORTA_0_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="BRAM_PORTB_0_we" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_we">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="BRAM_PORTA_0_we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="9" NAME="Q" RIGHT="0" SIGIS="data"/>
+        <PORT DIR="O" LEFT="63" NAME="S" RIGHT="0" SIGIS="data"/>
+        <PORT DIR="I" NAME="SCLR_RSTx" SIGIS="undef" SIGNAME="system_0_CLR_RST_control">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="CLR_RST_control"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="aclk_0" SIGIS="clk" SIGNAME="system_0_adc_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="adc_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="doutb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="latch_start" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_latch_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="FFT_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="mag_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="s_axis_data_tdata" RIGHT="0" SIGIS="undef" SIGNAME="system_0_FFT_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="system_0" PORT="FFT_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="system_0_BRAM_PORTA_0" NAME="BRAM_PORTB_0" TYPE="TARGET" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_ADDRESS_MODE"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="64"/>
+          <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTB_0_addr"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTB_0_clk"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM_PORTB_0_din"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM_PORTB_0_dout"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTB_0_en"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="BRAM_PORTB_0_rst"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="BRAM_PORTB_0_we"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE BD="system_inst_0" BDTYPE="BLOCK_CONTAINER" DRIVERMODE="SUBCORE" FULLNAME="/system_0" INSTANCE="system_0" IS_ENABLE="1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="ACTIVE_SIM_BD" VALUE="system.bd"/>
+        <PARAMETER NAME="ACTIVE_SYNTH_BD" VALUE="system.bd"/>
+        <PARAMETER NAME="ENABLE_DFX" VALUE="0"/>
+        <PARAMETER NAME="LIST_SIM_BD" VALUE="system.bd"/>
+        <PARAMETER NAME="LIST_SYNTH_BD" VALUE="system.bd"/>
+        <PARAMETER NAME="LOCK_PROPAGATE" VALUE="0"/>
+        <PARAMETER NAME="TRAINING_MODULE" VALUE="system.bd"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="12" NAME="BRAM_PORTA_0_addr" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="BRAM_PORTB_0_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM_PORTA_0_clk" SIGIS="clk" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="BRAM_PORTB_0_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="BRAM_PORTA_0_din" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_din">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="BRAM_PORTB_0_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="BRAM_PORTA_0_dout" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="BRAM_PORTB_0_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM_PORTA_0_en" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="BRAM_PORTB_0_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="BRAM_PORTA_0_rst" SIGIS="rst" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="BRAM_PORTB_0_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="BRAM_PORTA_0_we" RIGHT="0" SIGIS="undef" SIGNAME="design_singletoneFFT_0_BRAM_PORTB_0_we">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="BRAM_PORTB_0_we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="CLR_RST_control" RIGHT="0" SIGIS="undef" SIGNAME="system_0_CLR_RST_control">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="SCLR_RSTx"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" LEFT="14" NAME="DDR_addr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="IO" LEFT="2" NAME="DDR_ba" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="DDR_ck_n" SIGIS="clk"/>
+        <PORT DIR="IO" NAME="DDR_ck_p" SIGIS="clk"/>
+        <PORT DIR="IO" NAME="DDR_cke" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="DDR_cs_n" SIGIS="undef"/>
+        <PORT DIR="IO" LEFT="3" NAME="DDR_dm" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="IO" LEFT="31" NAME="DDR_dq" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="IO" LEFT="3" NAME="DDR_dqs_n" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="IO" LEFT="3" NAME="DDR_dqs_p" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="DDR_odt" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="DDR_ras_n" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="rst"/>
+        <PORT DIR="IO" NAME="DDR_we_n" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="125000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk"/>
+        <PORT DIR="I" NAME="FFT_TLAST" SIGIS="undef" SIGNAME="design_singletoneFFT_0_latch_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="latch_start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="FFT_in" RIGHT="0" SIGIS="undef" SIGNAME="system_0_FFT_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="s_axis_data_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef"/>
+        <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="S00_ARESETN" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
+        <PORT CLKFREQUENCY="125000000" DIR="O" NAME="adc_clk" SIGIS="clk" SIGNAME="system_0_adc_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_singletoneFFT_0" PORT="aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc_clk_n_i" SIGIS="clk" SIGNAME="External_Ports_adc_clk_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="adc_clk_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="adc_clk_p_i" SIGIS="clk" SIGNAME="External_Ports_adc_clk_p_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="adc_clk_p_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="adc_csn_o" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="13" NAME="adc_dat_a_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_adc_dat_a_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="adc_dat_a_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="13" NAME="adc_dat_b_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_adc_dat_b_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="adc_dat_b_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="adc_enc_n_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="adc_enc_p_o" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="daisy_n_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_daisy_n_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="daisy_n_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="daisy_n_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="daisy_p_i" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_daisy_p_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="daisy_p_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="daisy_p_o" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" DATAWIDTH="8" NAME="DDR" TYPE="INITIATOR" VLNV="xilinx.com:interface:ddrx:1.0">
+          <PARAMETER NAME="AXI_ARBITRATION_SCHEME" VALUE="TDM"/>
+          <PARAMETER NAME="BURST_LENGTH" VALUE="8"/>
+          <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
+          <PARAMETER NAME="CAS_LATENCY" VALUE="11"/>
+          <PARAMETER NAME="CAS_WRITE_LATENCY" VALUE="11"/>
+          <PARAMETER NAME="CS_ENABLED" VALUE="true"/>
+          <PARAMETER NAME="CUSTOM_PARTS"/>
+          <PARAMETER NAME="DATA_MASK_ENABLED" VALUE="true"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="8"/>
+          <PARAMETER NAME="MEMORY_PART"/>
+          <PARAMETER NAME="MEMORY_TYPE" VALUE="COMPONENTS"/>
+          <PARAMETER NAME="MEM_ADDR_MAP" VALUE="ROW_COLUMN_BANK"/>
+          <PARAMETER NAME="SLOT" VALUE="Single"/>
+          <PARAMETER NAME="TIMEPERIOD_PS" VALUE="1250"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="DDR_addr"/>
+            <PORTMAP LOGICAL="BA" PHYSICAL="DDR_ba"/>
+            <PORTMAP LOGICAL="CAS_N" PHYSICAL="DDR_cas_n"/>
+            <PORTMAP LOGICAL="CKE" PHYSICAL="DDR_cke"/>
+            <PORTMAP LOGICAL="CK_N" PHYSICAL="DDR_ck_n"/>
+            <PORTMAP LOGICAL="CK_P" PHYSICAL="DDR_ck_p"/>
+            <PORTMAP LOGICAL="CS_N" PHYSICAL="DDR_cs_n"/>
+            <PORTMAP LOGICAL="DM" PHYSICAL="DDR_dm"/>
+            <PORTMAP LOGICAL="DQ" PHYSICAL="DDR_dq"/>
+            <PORTMAP LOGICAL="DQS_N" PHYSICAL="DDR_dqs_n"/>
+            <PORTMAP LOGICAL="DQS_P" PHYSICAL="DDR_dqs_p"/>
+            <PORTMAP LOGICAL="ODT" PHYSICAL="DDR_odt"/>
+            <PORTMAP LOGICAL="RAS_N" PHYSICAL="DDR_ras_n"/>
+            <PORTMAP LOGICAL="RESET_N" PHYSICAL="DDR_reset_n"/>
+            <PORTMAP LOGICAL="WE_N" PHYSICAL="DDR_we_n"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="FIXED_IO" TYPE="INITIATOR" VLNV="xilinx.com:display_processing_system7:fixedio:1.0">
+          <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DDR_VRN" PHYSICAL="FIXED_IO_ddr_vrn"/>
+            <PORTMAP LOGICAL="DDR_VRP" PHYSICAL="FIXED_IO_ddr_vrp"/>
+            <PORTMAP LOGICAL="MIO" PHYSICAL="FIXED_IO_mio"/>
+            <PORTMAP LOGICAL="PS_CLK" PHYSICAL="FIXED_IO_ps_clk"/>
+            <PORTMAP LOGICAL="PS_PORB" PHYSICAL="FIXED_IO_ps_porb"/>
+            <PORTMAP LOGICAL="PS_SRSTB" PHYSICAL="FIXED_IO_ps_srstb"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="system_0_BRAM_PORTA_0" NAME="BRAM_PORTA_0" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_ADDRESS_MODE"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="8192"/>
+          <PARAMETER NAME="MEM_WIDTH" VALUE="64"/>
+          <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="BRAM_PORTA_0_addr"/>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="BRAM_PORTA_0_clk"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="BRAM_PORTA_0_din"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="BRAM_PORTA_0_dout"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="BRAM_PORTA_0_en"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="BRAM_PORTA_0_rst"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="BRAM_PORTA_0_we"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+      <MEMORYMAP/>
+      <PERIPHERALS>
+        <PERIPHERAL INSTANCE="design_singletoneFFT_0"/>
+      </PERIPHERALS>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

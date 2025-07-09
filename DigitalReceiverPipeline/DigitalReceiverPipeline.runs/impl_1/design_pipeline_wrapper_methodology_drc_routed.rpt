@@ -1,0 +1,651 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Wed Jul  9 16:14:09 2025
+| Host         : GiridharKING running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_pipeline_wrapper_methodology_drc_routed.rpt -pb design_pipeline_wrapper_methodology_drc_routed.pb -rpx design_pipeline_wrapper_methodology_drc_routed.rpx
+| Design       : design_pipeline_wrapper
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 113
++-----------+------------------+------------------------------------------------+--------+
+| Rule      | Severity         | Description                                    | Checks |
++-----------+------------------+------------------------------------------------+--------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks | 1      |
+| TIMING-7  | Critical Warning | No common node between related clocks          | 1      |
+| LUTAR-1   | Warning          | LUT drives async reset alert                   | 3      |
+| TIMING-16 | Warning          | Large setup violation                          | 92     |
+| TIMING-18 | Warning          | Missing input or output delay                  | 14     |
+| TIMING-20 | Warning          | Non-clocked latch                              | 1      |
+| LATCH-1   | Advisory         | Existing latches in the design                 | 1      |
++-----------+------------------+------------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and adc_clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks adc_clk]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and adc_clk are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks adc_clk]
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[4]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[0]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[1]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]/PRE,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[1]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_READ.read_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[4]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[0]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[1]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]/PRE,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[1]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/gpregsm1.curr_fwft_state[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_reg[4]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i_reg/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i_reg/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[0]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[1]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_d1_reg[4]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[0]/PRE,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[1]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[2]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[3]/CLR,
+design_pipeline_i/system_0/PS7/ps7_0_axi_periph/m00_couplers/auto_ds/inst/gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gcc0.gc0.count_reg[4]/CLR
+ (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.189 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][16]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.242 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][20]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.346 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][21]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.481 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][17]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.536 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][22]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.601 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][23]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.733 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][24]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.834 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][18]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.837 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][25]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.839 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][26]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.894 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][19]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.902 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][27]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -2.026 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][20]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -2.032 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][28]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -2.042 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][22]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -2.052 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][30]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -2.116 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][23]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -2.128 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][31]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -2.136 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][29]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -2.137 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][21]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -2.148 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][24]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -2.151 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][32]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -2.164 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][26]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -2.171 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][34]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -2.238 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][27]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -2.247 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][35]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -2.255 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][33]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -2.259 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][25]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -2.269 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][36]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -2.319 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][38]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -2.346 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][28]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -2.362 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][30]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -2.373 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][37]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -2.382 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][39]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -2.436 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][31]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -2.457 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][29]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -2.458 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][32]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -2.474 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][34]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -2.513 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][40]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -2.533 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][42]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -2.548 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][35]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -2.569 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][33]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -2.572 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][36]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -2.588 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][38]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -2.609 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][43]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -2.617 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][41]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -2.661 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][44]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -2.662 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][39]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -2.681 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][46]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -2.683 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][37]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -2.688 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][40]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -2.707 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][42]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -2.757 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][47]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -2.765 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][45]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -2.776 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][48]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -2.778 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][43]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -2.796 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][50]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -2.799 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[28]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][41]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -2.872 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][51]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -2.880 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[2]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][49]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -2.899 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][44]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -2.914 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][52]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -2.915 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][46]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -2.934 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][54]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -2.989 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][47]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -3.010 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][45]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -3.010 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][55]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -3.013 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][48]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -3.018 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][53]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -3.029 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][50]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -3.029 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][56]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -3.049 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][58]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -3.103 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][51]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -3.124 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][49]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -3.125 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][59]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -3.126 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][52]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -3.133 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][57]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -3.142 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][54]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -3.145 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][60]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#80 Warning
+Large setup violation  
+There is a large setup violation of -3.165 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][62]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#81 Warning
+Large setup violation  
+There is a large setup violation of -3.216 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][55]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#82 Warning
+Large setup violation  
+There is a large setup violation of -3.237 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][53]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#83 Warning
+Large setup violation  
+There is a large setup violation of -3.239 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][56]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#84 Warning
+Large setup violation  
+There is a large setup violation of -3.241 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][63]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#85 Warning
+Large setup violation  
+There is a large setup violation of -3.249 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[6]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_1/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][61]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#86 Warning
+Large setup violation  
+There is a large setup violation of -3.255 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][58]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -3.329 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][59]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -3.350 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][57]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -3.352 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][60]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -3.368 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][62]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -3.442 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][63]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -3.463 ns between design_pipeline_i/design_singletoneFFT_0/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/fifo_2_reg[29]/C (clocked by adc_clk) and design_pipeline_i/design_singletoneFFT_0/mag_fft/mult_gen_0/U0/i_mult/gLUT.gLUT_speed.iLUT/NxM_mult.stage_4_add.stage_4_pipeline.s4_add_out_reg[0][61]/D (clocked by adc_clk). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[0] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[10] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[11] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[12] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[13] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[1] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[2] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[3] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[4] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[5] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[6] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[7] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[8] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on adc_dat_a_i[9] relative to the rising and/or falling clock edge(s) of adc_clk.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch design_pipeline_i/design_singletoneFFT_0/latch_0/inst/sig_out_reg[0] cannot be properly analyzed as its control pin design_pipeline_i/design_singletoneFFT_0/latch_0/inst/sig_out_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 1 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+

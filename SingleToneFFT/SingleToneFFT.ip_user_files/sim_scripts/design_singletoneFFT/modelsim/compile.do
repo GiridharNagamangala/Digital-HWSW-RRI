@@ -15,10 +15,11 @@ vlib modelsim_lib/msim/cmpy_v6_0_25
 vlib modelsim_lib/msim/floating_point_v7_0_24
 vlib modelsim_lib/msim/xfft_v9_1_13
 vlib modelsim_lib/msim/xil_defaultlib
-vlib modelsim_lib/msim/xlconstant_v1_1_9
-vlib modelsim_lib/msim/c_counter_binary_v12_0_20
 vlib modelsim_lib/msim/xlslice_v1_0_4
 vlib modelsim_lib/msim/blk_mem_gen_v8_4_9
+vlib modelsim_lib/msim/xlconstant_v1_1_9
+vlib modelsim_lib/msim/c_counter_binary_v12_0_20
+vlib modelsim_lib/msim/xlconcat_v2_1_6
 
 vmap xpm modelsim_lib/msim/xpm
 vmap xbip_utils_v3_0_14 modelsim_lib/msim/xbip_utils_v3_0_14
@@ -34,10 +35,11 @@ vmap cmpy_v6_0_25 modelsim_lib/msim/cmpy_v6_0_25
 vmap floating_point_v7_0_24 modelsim_lib/msim/floating_point_v7_0_24
 vmap xfft_v9_1_13 modelsim_lib/msim/xfft_v9_1_13
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
-vmap xlconstant_v1_1_9 modelsim_lib/msim/xlconstant_v1_1_9
-vmap c_counter_binary_v12_0_20 modelsim_lib/msim/c_counter_binary_v12_0_20
 vmap xlslice_v1_0_4 modelsim_lib/msim/xlslice_v1_0_4
 vmap blk_mem_gen_v8_4_9 modelsim_lib/msim/blk_mem_gen_v8_4_9
+vmap xlconstant_v1_1_9 modelsim_lib/msim/xlconstant_v1_1_9
+vmap c_counter_binary_v12_0_20 modelsim_lib/msim/c_counter_binary_v12_0_20
+vmap xlconcat_v2_1_6 modelsim_lib/msim/xlconcat_v2_1_6
 
 vlog -work xpm  -incr -mfcu  -sv \
 "C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
@@ -240,19 +242,6 @@ vcom -work xfft_v9_1_13  -93  \
 
 vcom -work xil_defaultlib  -93  \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/sim/design_singletoneFFT_xfft_0_1.vhd" \
-
-vlog -work xlconstant_v1_1_9  -incr -mfcu  \
-"../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -incr -mfcu  \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/sim/design_singletoneFFT_xlconstant_0_1.v" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/sim/design_singletoneFFT_xlconstant_4_0.v" \
-
-vcom -work c_counter_binary_v12_0_20  -93  \
-"../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/88ee/hdl/c_counter_binary_v12_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib  -93  \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_c_counter_binary_0_0/sim/design_singletoneFFT_c_counter_binary_0_0.vhd" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_0/sim/design_singletoneFFT_mult_gen_0_0.vhd" \
 
 vlog -work xlslice_v1_0_4  -incr -mfcu  \
@@ -280,6 +269,33 @@ vlog -work xil_defaultlib  -incr -mfcu  \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mux_acc_0_0/sim/design_singletoneFFT_mux_acc_0_0.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_0_2/sim/design_singletoneFFT_signal_delay_0_2.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/sim/design_singletoneFFT_latch_0_0.v" \
+
+vlog -work xlconstant_v1_1_9  -incr -mfcu  \
+"../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/sim/design_singletoneFFT_xlconstant_0_1.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/sim/design_singletoneFFT_xlconstant_4_0.v" \
+
+vcom -work c_counter_binary_v12_0_20  -93  \
+"../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/88ee/hdl/c_counter_binary_v12_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib  -93  \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_c_counter_binary_0_0/sim/design_singletoneFFT_c_counter_binary_0_0.vhd" \
+
+vlog -work xil_defaultlib  -incr -mfcu  \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_1_0/sim/design_singletoneFFT_xlconstant_1_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_1_0/sim/design_singletoneFFT_blk_mem_gen_1_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_2_0/sim/design_singletoneFFT_xlconstant_2_0.v" \
+
+vlog -work xlconcat_v2_1_6  -incr -mfcu  \
+"../../../../SingleToneFFT.srcs/sources_1/bd/design_singletoneFFT/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -incr -mfcu  \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconcat_0_0/sim/design_singletoneFFT_xlconcat_0_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_3_0/sim/design_singletoneFFT_xlconstant_3_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_2/sim/design_singletoneFFT_xlslice_0_2.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_3/sim/design_singletoneFFT_xlslice_0_3.v" \
 "../../../bd/design_singletoneFFT/sim/design_singletoneFFT.v" \
 
 vlog -work xil_defaultlib \

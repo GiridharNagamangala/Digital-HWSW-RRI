@@ -20,10 +20,10 @@ preplace netloc adc_clk_n_i_1 1 0 1 10J 50n
 preplace netloc adc_clk_p_i_1 1 0 1 20J 20n
 preplace netloc adc_dat_a_i_1 1 0 1 20J 80n
 preplace netloc adc_dat_b_i_1 1 0 1 NJ 110
-preplace netloc axis_red_pitaya_adc_0_adc_clk 1 1 3 NJ 100 NJ 100 840
-preplace netloc axis_red_pitaya_adc_0_adc_csn 1 1 3 NJ 120 NJ 120 830
-preplace netloc axis_red_pitaya_adc_0_m_axis_tdata 1 1 1 330J 40n
-preplace netloc axis_red_pitaya_adc_0_m_axis_tvalid 1 1 3 330J 110 NJ 110 830J
+preplace netloc axis_red_pitaya_adc_0_adc_clk 1 1 3 NJ 100 NJ 100 850
+preplace netloc axis_red_pitaya_adc_0_adc_csn 1 1 3 NJ 120 NJ 120 840
+preplace netloc axis_red_pitaya_adc_0_m_axis_tdata 1 1 1 340J 40n
+preplace netloc axis_red_pitaya_adc_0_m_axis_tvalid 1 1 3 340J 110 NJ 110 840J
 preplace netloc sign_extension_0_din_A 1 3 1 NJ 40
 preplace netloc xlslice_0_Dout 1 2 1 NJ 40
 levelinfo -pg 1 -10 180 470 710 870

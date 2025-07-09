@@ -1,33 +1,31 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.862295",
-   "Default View_TopLeft":"-365,0",
+   "Default View_ScaleFactor":"1.18597",
+   "Default View_TopLeft":"-158,-35",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port port-id_m_axis_data_tlast_0 -pg 1 -lvl 2 -x 490 -y 20 -defaultsOSRD
-preplace port port-id_adc_clk_p_i -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
-preplace port port-id_adc_clk_n_i -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
-preplace portBus S_0 -pg 1 -lvl 2 -x 490 -y 100 -defaultsOSRD
-preplace portBus mag_out -pg 1 -lvl 2 -x 490 -y 130 -defaultsOSRD
-preplace portBus adc_dat_a_i -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
-preplace portBus adc_dat_b_i -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
-preplace inst design_singletoneFFT_0 -pg 1 -lvl 1 -x 250 -y 100 -defaultsOSRD
-preplace inst system_0 -pg 1 -lvl 1 -x 250 -y 410 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 1 -x 250 -y 220 -defaultsOSRD
-preplace netloc system_0_FFT_in 1 0 2 50 580 450
-preplace netloc system_0_adc_clk_o 1 0 2 40 590 430
-preplace netloc system_0_CLR_RST_control 1 0 2 60 570 440
-preplace netloc design_singletoneFFT_0_m_axis_data_tlast_0 1 0 2 30 10 470J
-preplace netloc design_singletoneFFT_0_S_0 1 0 2 70 560 470J
-preplace netloc design_singletoneFFT_0_mag_out 1 0 2 70 20 440
-preplace netloc xlslice_0_Dout 1 0 2 20 600 460
-preplace netloc adc_dat_a_i_1 1 0 1 20 310n
-preplace netloc adc_dat_b_i_1 1 0 1 20 340n
-preplace netloc adc_clk_p_i_1 1 0 1 N 370
-preplace netloc adc_clk_n_i_1 1 0 1 20 390n
-levelinfo -pg 1 0 250 490
-pagesize -pg 1 -db -bbox -sgen -160 0 670 610
+preplace port port-id_adc_clk_p_i -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port port-id_adc_clk_n_i -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace portBus adc_dat_a_i -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus adc_dat_b_i -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace portBus daisy_p_i -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace portBus daisy_n_i -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
+preplace inst design_singletoneFFT_0 -pg 1 -lvl 2 -x 560 -y 130 -defaultsOSRD
+preplace inst system_0 -pg 1 -lvl 1 -x 200 -y 180 -defaultsOSRD
+preplace netloc FFT_TLAST_1 1 0 3 30 360 N 360 730
+preplace netloc adc_dat_a_i_1 1 0 1 30 100n
+preplace netloc adc_dat_b_i_1 1 0 1 30 130n
+preplace netloc system_0_CLR_RST_control 1 1 1 380 140n
+preplace netloc system_0_FFT_in 1 1 1 390 160n
+preplace netloc daisy_p_i_0_1 1 0 1 N 160
+preplace netloc daisy_n_i_0_1 1 0 1 30 180n
+preplace netloc adc_clk_p_i_0_1 1 0 1 N 220
+preplace netloc adc_clk_n_i_0_1 1 0 1 20 240n
+preplace netloc system_0_adc_clk 1 1 1 370 120n
+preplace netloc system_0_BRAM_PORTA_0 1 1 1 N 100
+levelinfo -pg 1 0 200 560 750
+pagesize -pg 1 -db -bbox -sgen -160 0 750 370
 "
 }
 0

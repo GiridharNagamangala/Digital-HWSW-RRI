@@ -1,46 +1,61 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.522306",
-   "Default View_TopLeft":"-147,-149",
+   "Default View_ScaleFactor":"1.02632",
+   "Default View_TopLeft":"-193,433",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port port-id_aclk_0 -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
-preplace port port-id_m_axis_data_tlast_0 -pg 1 -lvl 7 -x 1720 -y 20 -defaultsOSRD
-preplace port port-id_SCLR_RSTx -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
-preplace portBus S_0 -pg 1 -lvl 7 -x 1720 -y 520 -defaultsOSRD
-preplace portBus s_axis_data_tdata -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
-preplace portBus mag_out -pg 1 -lvl 7 -x 1720 -y 50 -defaultsOSRD
-preplace inst xfft_0 -pg 1 -lvl 2 -x 440 -y 160 -defaultsOSRD
-preplace inst mag_fft -pg 1 -lvl 4 -x 1110 -y 90 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 6 -x 1600 -y 350 -defaultsOSRD
-preplace inst c_addsub_0 -pg 1 -lvl 5 -x 1370 -y 600 -defaultsOSRD
-preplace inst signal_delay_1 -pg 1 -lvl 2 -x 440 -y 380 -defaultsOSRD
-preplace inst mux_acc_0 -pg 1 -lvl 4 -x 1110 -y 530 -defaultsOSRD
-preplace inst signal_delay_0 -pg 1 -lvl 2 -x 440 -y 550 -defaultsOSRD
-preplace inst latch_0 -pg 1 -lvl 3 -x 810 -y 550 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 200 -defaultsOSRD
-preplace inst xlconstant_4 -pg 1 -lvl 5 -x 1370 -y 440 -defaultsOSRD
-preplace inst c_counter_binary_0 -pg 1 -lvl 3 -x 810 -y 180 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 1 -x 100 -y 350 -defaultsOSRD
-preplace netloc CommandLogic_Q_bram_acc 1 1 5 240J 300 NJ 300 930 260 N 260 N
-preplace netloc CommandLogic_bram_wea 1 5 1 1480 340n
-preplace netloc aclk_0_1 1 0 6 N 260 190 10 670 80 970 370 1270 370 1500
-preplace netloc blk_mem_gen_0_doutb 1 3 3 980 360 NJ 360 1460J
-preplace netloc c_addsub_0_S 1 5 2 1470J 520 NJ
-preplace netloc inputs_dout 1 1 5 210 460 690 450 N 450 1250 500 1490
-preplace netloc inputs_dout_1 1 1 1 200 180n
-preplace netloc inputs_dout_2 1 0 5 N 290 220 640 N 640 N 640 N
-preplace netloc latch_0_sig_out 1 3 1 N 550
-preplace netloc mag_fft_mag_out 1 4 3 1280 50 N 50 N
-preplace netloc mux_acc_0_val_out 1 4 1 1260 530n
-preplace netloc s_axis_data_tdata_1 1 0 2 NJ 100 200
-preplace netloc signal_delay_0_dout 1 2 1 N 550
-preplace netloc signal_delay_1_dout 1 2 4 N 380 N 380 N 380 NJ
-preplace netloc xfft_0_m_axis_data_tdata 1 2 2 N 100 N
-preplace netloc xfft_0_m_axis_data_tlast 1 1 6 230 20 680J 20 N 20 N 20 NJ 20 NJ
-levelinfo -pg 1 0 100 440 810 1110 1370 1600 1720
-pagesize -pg 1 -db -bbox -sgen -220 0 1910 700
+preplace port BRAM_PORTB_0 -pg 1 -lvl 0 -x 0 -y 770 -defaultsOSRD
+preplace port port-id_aclk_0 -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace port port-id_SCLR_RSTx -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace portBus s_axis_data_tdata -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace portBus latch_start -pg 1 -lvl 7 -x 1820 -y 570 -defaultsOSRD
+preplace portBus mag_out -pg 1 -lvl 7 -x 1820 -y 80 -defaultsOSRD
+preplace portBus doutb -pg 1 -lvl 7 -x 1820 -y 20 -defaultsOSRD
+preplace portBus S -pg 1 -lvl 7 -x 1820 -y 50 -defaultsOSRD
+preplace portBus Q -pg 1 -lvl 7 -x 1820 -y 110 -defaultsOSRD
+preplace inst xfft_0 -pg 1 -lvl 2 -x 460 -y 170 -defaultsOSRD
+preplace inst mag_fft -pg 1 -lvl 4 -x 1140 -y 100 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 6 -x 1680 -y 250 -defaultsOSRD
+preplace inst c_addsub_0 -pg 1 -lvl 5 -x 1410 -y 410 -defaultsOSRD
+preplace inst signal_delay_1 -pg 1 -lvl 2 -x 460 -y 390 -defaultsOSRD
+preplace inst mux_acc_0 -pg 1 -lvl 4 -x 1140 -y 390 -defaultsOSRD
+preplace inst signal_delay_0 -pg 1 -lvl 2 -x 460 -y 530 -defaultsOSRD
+preplace inst latch_0 -pg 1 -lvl 3 -x 830 -y 530 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 140 -y 190 -defaultsOSRD
+preplace inst xlconstant_4 -pg 1 -lvl 5 -x 1410 -y 220 -defaultsOSRD
+preplace inst c_counter_binary_0 -pg 1 -lvl 3 -x 830 -y 190 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 140 -y 340 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 6 -x 1680 -y 700 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 3 -x 830 -y 630 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1140 -y 520 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 4 -x 1140 -y 630 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 5 -x 1410 -y 670 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 4 -x 1140 -y 730 -defaultsOSRD
+preplace netloc CommandLogic_Q_bram_acc 1 1 6 250J 10 NJ 10 970 30 N 30 1560 70 1800
+preplace netloc CommandLogic_bram_wea 1 5 1 1540 220n
+preplace netloc aclk_0_1 1 0 6 N 250 230 20 690 90 980 260 1300 300 1550
+preplace netloc blk_mem_gen_0_doutb 1 3 4 1000 290 NJ 290 1530J 20 N
+preplace netloc c_addsub_0_S 1 5 2 1520J 50 N
+preplace netloc inputs_dout 1 1 5 220 30 680 270 N 270 1290 310 1560
+preplace netloc inputs_dout_1 1 1 1 N 190
+preplace netloc inputs_dout_2 1 0 5 N 280 240 310 N 310 N 310 1280
+preplace netloc latch_0_sig_out 1 3 4 980 800 1310 570 N 570 N
+preplace netloc mag_fft_mag_out 1 4 3 1310 80 N 80 N
+preplace netloc mux_acc_0_val_out 1 4 1 N 390
+preplace netloc s_axis_data_tdata_1 1 0 2 NJ 130 N
+preplace netloc signal_delay_0_dout 1 2 1 N 530
+preplace netloc signal_delay_1_dout 1 2 4 N 390 990 280 N 280 NJ
+preplace netloc xfft_0_m_axis_data_tdata 1 2 2 N 110 N
+preplace netloc xfft_0_m_axis_data_tlast 1 1 2 250 610 670J
+preplace netloc xlconcat_0_dout 1 4 2 NJ 520 1510
+preplace netloc xlconstant_2_dout 1 3 1 1000 530n
+preplace netloc xlconstant_3_dout 1 4 2 1280 750 NJ
+preplace netloc xlslice_0_Dout 1 5 1 1510 670n
+preplace netloc xlslice_1_Dout 1 4 2 NJ 730 N
+preplace netloc BRAM_PORTB_0_1 1 0 6 NJ 770 NJ 770 NJ 770 970J 790 NJ 790 1550J
+levelinfo -pg 1 0 140 460 830 1140 1410 1680 1820
+pagesize -pg 1 -db -bbox -sgen -220 0 2000 1000
 "
 }
 0

@@ -18,10 +18,11 @@ vlib activehdl/cmpy_v6_0_25
 vlib activehdl/floating_point_v7_0_24
 vlib activehdl/xfft_v9_1_13
 vlib activehdl/xil_defaultlib
-vlib activehdl/xlconstant_v1_1_9
-vlib activehdl/c_counter_binary_v12_0_20
 vlib activehdl/xlslice_v1_0_4
 vlib activehdl/blk_mem_gen_v8_4_9
+vlib activehdl/xlconstant_v1_1_9
+vlib activehdl/c_counter_binary_v12_0_20
+vlib activehdl/xlconcat_v2_1_6
 
 vmap xpm activehdl/xpm
 vmap xbip_utils_v3_0_14 activehdl/xbip_utils_v3_0_14
@@ -37,12 +38,13 @@ vmap cmpy_v6_0_25 activehdl/cmpy_v6_0_25
 vmap floating_point_v7_0_24 activehdl/floating_point_v7_0_24
 vmap xfft_v9_1_13 activehdl/xfft_v9_1_13
 vmap xil_defaultlib activehdl/xil_defaultlib
-vmap xlconstant_v1_1_9 activehdl/xlconstant_v1_1_9
-vmap c_counter_binary_v12_0_20 activehdl/c_counter_binary_v12_0_20
 vmap xlslice_v1_0_4 activehdl/xlslice_v1_0_4
 vmap blk_mem_gen_v8_4_9 activehdl/blk_mem_gen_v8_4_9
+vmap xlconstant_v1_1_9 activehdl/xlconstant_v1_1_9
+vmap c_counter_binary_v12_0_20 activehdl/c_counter_binary_v12_0_20
+vmap xlconcat_v2_1_6 activehdl/xlconcat_v2_1_6
 
-vlog -work xpm  -sv2k12 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
+vlog -work xpm  -sv2k12 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
 "C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93  \
@@ -75,10 +77,10 @@ vcom -work mult_gen_v12_0_22 -93  \
 vcom -work floating_point_v7_1_19 -93  \
 "../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/bf3d/hdl/floating_point_v7_1_rfs.vhd" \
 
-vlog -work floating_point_v7_1_19  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
+vlog -work floating_point_v7_1_19  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
 "../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/bf3d/hdl/floating_point_v7_1_rfs.v" \
 
-vlog -work cmpy_v6_0_25  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
+vlog -work cmpy_v6_0_25  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
 "../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/01d8/hdl/cmpy_v6_0_rfs.v" \
 
 vcom -work cmpy_v6_0_25 -93  \
@@ -243,11 +245,38 @@ vcom -work xfft_v9_1_13 -93  \
 
 vcom -work xil_defaultlib -93  \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xfft_0_1/sim/design_singletoneFFT_xfft_0_1.vhd" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_0/sim/design_singletoneFFT_mult_gen_0_0.vhd" \
 
-vlog -work xlconstant_v1_1_9  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
+vlog -work xlslice_v1_0_4  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
+"../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v" \
+
+vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_0/sim/design_singletoneFFT_xlslice_0_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_1/sim/design_singletoneFFT_xlslice_0_1.v" \
+
+vcom -work xil_defaultlib -93  \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_1/sim/design_singletoneFFT_mult_gen_0_1.vhd" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_c_addsub_0_0/sim/design_singletoneFFT_c_addsub_0_0.vhd" \
+
+vlog -work blk_mem_gen_v8_4_9  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
+"../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/5ec1/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/sim/design_singletoneFFT_blk_mem_gen_0_0.v" \
+
+vcom -work xil_defaultlib -93  \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_c_addsub_0_1/sim/design_singletoneFFT_c_addsub_0_1.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_1_0/sim/design_singletoneFFT_signal_delay_1_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mux_acc_0_0/sim/design_singletoneFFT_mux_acc_0_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_0_2/sim/design_singletoneFFT_signal_delay_0_2.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/sim/design_singletoneFFT_latch_0_0.v" \
+
+vlog -work xlconstant_v1_1_9  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
 "../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v" \
 
-vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
+vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_0_1/sim/design_singletoneFFT_xlconstant_0_1.v" \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_4_0/sim/design_singletoneFFT_xlconstant_4_0.v" \
 
@@ -256,33 +285,20 @@ vcom -work c_counter_binary_v12_0_20 -93  \
 
 vcom -work xil_defaultlib -93  \
 "../../../bd/design_singletoneFFT/ip/design_singletoneFFT_c_counter_binary_0_0/sim/design_singletoneFFT_c_counter_binary_0_0.vhd" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_0/sim/design_singletoneFFT_mult_gen_0_0.vhd" \
 
-vlog -work xlslice_v1_0_4  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
-"../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/a97c/hdl/xlslice_v1_0_vl_rfs.v" \
+vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_1_0/sim/design_singletoneFFT_xlconstant_1_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_1_0/sim/design_singletoneFFT_blk_mem_gen_1_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_2_0/sim/design_singletoneFFT_xlconstant_2_0.v" \
 
-vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_0/sim/design_singletoneFFT_xlslice_0_0.v" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_1/sim/design_singletoneFFT_xlslice_0_1.v" \
+vlog -work xlconcat_v2_1_6  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
+"../../../../SingleToneFFT.srcs/sources_1/bd/design_singletoneFFT/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v" \
 
-vcom -work xil_defaultlib -93  \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mult_gen_0_1/sim/design_singletoneFFT_mult_gen_0_1.vhd" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_c_addsub_0_0/sim/design_singletoneFFT_c_addsub_0_0.vhd" \
-
-vlog -work blk_mem_gen_v8_4_9  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
-"../../../../SingleToneFFT.gen/sources_1/bd/design_singletoneFFT/ipshared/5ec1/simulation/blk_mem_gen_v8_4.v" \
-
-vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_blk_mem_gen_0_0/sim/design_singletoneFFT_blk_mem_gen_0_0.v" \
-
-vcom -work xil_defaultlib -93  \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_c_addsub_0_1/sim/design_singletoneFFT_c_addsub_0_1.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_1_0/sim/design_singletoneFFT_signal_delay_1_0.v" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_mux_acc_0_0/sim/design_singletoneFFT_mux_acc_0_0.v" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_signal_delay_0_2/sim/design_singletoneFFT_signal_delay_0_2.v" \
-"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_latch_0_0/sim/design_singletoneFFT_latch_0_0.v" \
+vlog -work xil_defaultlib  -v2k5 -l xpm -l xbip_utils_v3_0_14 -l axi_utils_v2_0_10 -l c_reg_fd_v12_0_10 -l xbip_dsp48_wrapper_v3_0_6 -l xbip_pipe_v3_0_10 -l c_addsub_v12_0_19 -l c_shift_ram_v12_0_18 -l mult_gen_v12_0_22 -l floating_point_v7_1_19 -l cmpy_v6_0_25 -l floating_point_v7_0_24 -l xfft_v9_1_13 -l xil_defaultlib -l xlslice_v1_0_4 -l blk_mem_gen_v8_4_9 -l xlconstant_v1_1_9 -l c_counter_binary_v12_0_20 -l xlconcat_v2_1_6 \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconcat_0_0/sim/design_singletoneFFT_xlconcat_0_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlconstant_3_0/sim/design_singletoneFFT_xlconstant_3_0.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_2/sim/design_singletoneFFT_xlslice_0_2.v" \
+"../../../bd/design_singletoneFFT/ip/design_singletoneFFT_xlslice_0_3/sim/design_singletoneFFT_xlslice_0_3.v" \
 "../../../bd/design_singletoneFFT/sim/design_singletoneFFT.v" \
 
 vlog -work xil_defaultlib \

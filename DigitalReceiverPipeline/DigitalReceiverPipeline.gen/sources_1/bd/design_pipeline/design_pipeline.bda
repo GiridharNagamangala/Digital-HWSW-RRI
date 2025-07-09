@@ -234,21 +234,21 @@
             },
             "V13": {
                 "VT": "AC",
-                "BA": "0x41200000",
-                "HA": "0x4120FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
+                "BA": "0x40000000",
+                "HA": "0x40001FFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
                 "MA": "Data",
                 "MX": "/system_0/PS7/processing_system7_0",
                 "MI": "M_AXI_GP0",
-                "MS": "SEG_axi_gpio_1_Reg",
+                "MS": "SEG_axi_bram_ctrl_0_Mem0",
                 "MV": "xilinx.com:ip:processing_system7:5.5",
-                "SX": "/system_0/axi_gpio_1",
+                "SX": "/system_0/axi_bram_ctrl_0",
                 "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
                 "TM": "both",
-                "TU": "register"
+                "TU": "memory"
             },
             "V14": {
                 "VT": "AC",
@@ -267,6 +267,24 @@
                 "SV": "xilinx.com:ip:axi_gpio:2.0",
                 "TM": "both",
                 "TU": "register"
+            },
+            "V15": {
+                "VT": "AC",
+                "BA": "0x43C00000",
+                "HA": "0x43C0FFFF",
+                "BP": "C_S_AXI_BASEADDR",
+                "HP": "C_S_AXI_HIGHADDR",
+                "MA": "Data",
+                "MX": "/system_0/PS7/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_M_AXI_DATA_Reg",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/design_singletoneFFT_0/axi_bram_ctrl_0",
+                "SI": "S_AXI",
+                "SS": "Mem0",
+                "SV": "xilinx.com:ip:axi_bram_ctrl:4.1",
+                "TM": "both",
+                "TU": "memory"
             }
         },
         "edges": [
